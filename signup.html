@@ -21,7 +21,30 @@
         <a href="login.html" >Login</a>
         <a href="" id="highlight">Signup</a>
     </div></header>
-    <form><h4>Sign up</h4></form>
+    <form id="signform" method="post" action="login.php">
+        <h2>Sign Up Form</h2>
+        <label class="loglbl" for="email">Email</label>
+        <input required type="email" id="email" name="name" class="logfields" placeholder="Enter Email" >
+
+        <!-- <label class="loglbl">Password</label>
+        <input required type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
+        <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
+        <button type="reset" class="logbtn">Reset</button>
+        <button type="submit" class="logbtn">Submit</button> -->
+        <label class="loglbl" for="email">Phone Number</label>
+        <input required type="tel" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
+        <label class="loglbl" for="email">First name</label>
+        <input required type="text" id="username" name="name" class="logfields" placeholder="Enter First Name" >
+        <label class="loglbl" for="email">Last Name</label>
+        <input required type="email" id="email" name="name" class="logfields" placeholder="Enter Last Name" >
+        <label class="loglbl" for="email">Password</label>
+        <input required type="password" id="" name="password" class="logfields" placeholder="Password" >
+        <label class="loglbl" for="email"> Confirm Password</label>
+        <input required type="password" id="" name="password" class="logfields" placeholder="Password" >
+        
+
+    </form>
+    
 <script src="index.js"></script>
 </body>
 </html>

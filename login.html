@@ -22,10 +22,10 @@
         <a href="signup.html">Signup</a></div>
     </header>
       
-    <form id="logform">
+    <form id="logform" method="post" action="login.php">
         <h2>Login Form</h2>
         <label class="loglbl">Name</label>
-        <input required type="text" name="name" class="logfields" placeholder="Enter username" >
+        <input required type="email" name="name" class="logfields" placeholder="Enter username" >
         <label class="loglbl">Password</label>
         <input required type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
         <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >

@@ -95,7 +95,14 @@ a:hover{
 #logshowpass{
    position: absolute;
    top:12.56rem;
-   left: 20rem;
+   left:20rem;
    width:2rem;
    
+}
+#signform{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+    background-color: rgba(186, 50, 50, 0.968);
 }
