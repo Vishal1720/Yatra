@@ -106,4 +106,8 @@ a:hover{
     margin: auto;
     background-color: rgba(56, 97, 221, 0.2);
     backdrop-filter: blur(30px);
+    padding:2rem;
+}
+#username,#lname{
+    width: 50%;
 }

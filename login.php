@@ -16,3 +16,6 @@ if($logval)
 {
     Header("Location:userhomepage.html");
 }
+else{
+    echo 'alert("Error  in login");';
+}
