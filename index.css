@@ -104,5 +104,6 @@ a:hover{
     flex-direction: column;
     width: 50vw;
     margin: auto;
-    background-color: rgba(186, 50, 50, 0.968);
+    background-color: rgba(56, 97, 221, 0.2);
+    backdrop-filter: blur(30px);
 }
