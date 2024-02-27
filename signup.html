@@ -46,9 +46,11 @@
         <label class="loglbl" for="confirmpass"> Confirm Password</label>
         <input required type="password" id="confirmpass" name="password" class="logfields" placeholder="Password" >
         <label class="loglbl" for="add"> Address </label>
-        <textarea required  id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
-        <label class="loglbl" for="pincode"> Pincode</label>
-        <input type="number" id="pin" name="pin" class="logfields" required placeholder="pincode"/>
+        <div style="display: flex;">
+        <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
+        
+        <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
+    </div>
         <label class="loglbl" for="pincode"> District </label>
         <select class="logfields"><option>Udupi</option><option>Dakshina Kannada</option></select>
         <button type="reset" class="logbtn">Reset</button>
