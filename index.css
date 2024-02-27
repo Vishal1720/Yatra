@@ -15,6 +15,7 @@ header{
     
     flex-wrap: wrap;
     align-items: center;
+    z-index: 20;
 }
 #logo{
     border-radius: 13rem;
@@ -107,7 +108,12 @@ a:hover{
     background-color: rgba(56, 97, 221, 0.2);
     backdrop-filter: blur(30px);
     padding:2rem;
+    padding-top: 1rem;
+    margin-top:1rem;
 }
 #username,#lname{
     width: 50%;
+}
+#address{
+    width:75%;
 }

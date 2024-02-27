@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./index.css"> 
 </head>
 <body >
-    <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
+    <header id="navbar" style="transition:0s"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
         <h4 style="display: inline;">Yatra</h4></figure>
     <div id="navlinks">
         <a href="index.html">About</a>
@@ -23,27 +23,37 @@
     </div></header>
     <form id="signform" method="post" action="login.php">
         <h2>Sign Up Form</h2>
+        <label class="loglbl" for="email">First name</label>
+        <div style="display: flex;">
+            <input required type="text" id="username" name="name" class="logfields" placeholder="Enter First Name" >
+            <input required type="text" id="lname" name="name" class="logfields" placeholder="Enter Last Name" >
+        </div>
         <label class="loglbl" for="email">Email</label>
         <input required type="email" id="email" name="name" class="logfields" placeholder="Enter Email" >
 
         <!-- <label class="loglbl">Password</label>
         <input required type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
         <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
-        <button type="reset" class="logbtn">Reset</button>
-        <button type="submit" class="logbtn">Submit</button> -->
+         -->
         <label class="loglbl" for="email">Phone Number</label>
-        <input required type="tel" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
-        <label class="loglbl" for="email">First name</label>
         <div style="display: flex;">
-        <input required type="text" id="username" name="name" class="logfields" placeholder="Enter First Name" >
-        <input required type="text" id="lname" name="name" class="logfields" placeholder="Enter Last Name" >
+        <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
+        
+        <label>Male<input type="radio" name="gender"></label><label>Female<input name="gender" type="radio"></label>
     </div>
         <label class="loglbl" for="initpass">Password</label>
         <input required type="password" id="initpass" name="password" class="logfields" placeholder="Password" >
         <label class="loglbl" for="confirmpass"> Confirm Password</label>
         <input required type="password" id="confirmpass" name="password" class="logfields" placeholder="Password" >
+        <label class="loglbl" for="add"> Address </label>
+        <textarea required  id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
+        <label class="loglbl" for="pincode"> Pincode</label>
+        <input type="number" id="pin" name="pin" class="logfields" required placeholder="pincode"/>
+        <label class="loglbl" for="pincode"> District </label>
+        <select class="logfields"><option>Udupi</option><option>Dakshina Kannada</option></select>
+        <button type="reset" class="logbtn">Reset</button>
+        <button type="submit" class="logbtn">Submit</button>
         
-
     </form>
     
 <script src="index.js"></script>
