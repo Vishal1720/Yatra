@@ -29,21 +29,19 @@ body{
 }
 #navbar{
     position: sticky;
-    top: 0%;
+    top: 0px;
     transition: 0.4s;
     display: flex;
-   
+   flex-direction: row;
 }
 
 #navlinks{
     margin-left:20rem;
     background-color: rgba(240, 248, 255,0.2);
     border-radius: 2rem;
-    height:100%;
-    
-    text-align: center;
-    
-
+   display: flex;
+   flex-direction: row;
+   
 }
 a{
     color: white;
@@ -51,11 +49,13 @@ a{
     text-decoration: none;
     margin-left: 1rem;
     text-shadow: 0.1rem 0.1rem 0.1rem black;
-    margin-top: -10rem;
+    
     padding: 1rem;
     transition:0.3s;
-    border-radius: 4rem;
-    margin-bottom:3rem;
+    border-radius: 2rem;
+   margin-top: 2%;
+   margin-bottom: 2%;
+    height: inherit;
 }
 a:hover{
     font-size:2.3rem;
@@ -120,4 +120,7 @@ a:hover{
 #pin{
     height: 3rem;
     margin-top:1.5rem;
+}
+#signupanchor{
+    margin-right: 1rem;
 }
