@@ -12,10 +12,12 @@ $name=$_POST['name'];
 $pass=$_POST['password'];
 $logval=$con->query("SELECT * FROM `yatra`.`regform` WHERE email='$name' and password='$pass' ");
 
-if($logval)
+if($logval->num_rows>=1)
 {
     Header("Location:userhomepage.html");
 }
 else{
-    echo 'alert("Error  in login");';
+    Header("Location:login.html");
+    echo '<script>window.alert("Error  in login");</script>';
+     
 }
