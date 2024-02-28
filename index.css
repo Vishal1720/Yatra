@@ -61,7 +61,7 @@ a:hover{
     font-size:2.3rem;
     background-color: rgba(248, 248, 255,0.3);
 }
-#highlight{
+.highlight{
     background-color: rgba(248, 248, 255,0.3);
 }
 #logform{
