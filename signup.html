@@ -21,25 +21,23 @@
         <a href="login.html" >Login</a>
         <a href="" id="highlight">Signup</a>
     </div></header>
-    <form id="signform" method="post" action="login.php">
+    <form id="signform" method="post" action="signup.php">
         <h2>Sign Up Form</h2>
-        <label class="loglbl" for="email">First name</label>
+        <label class="loglbl" for="usernname">First name</label>
         <div style="display: flex;">
             <input required type="text" id="username" name="name" class="logfields" placeholder="Enter First Name" >
-            <input required type="text" id="lname" name="name" class="logfields" placeholder="Enter Last Name" >
+            <input required type="text" id="lname" name="lname" class="logfields" placeholder="Enter Last Name" >
         </div>
         <label class="loglbl" for="email">Email</label>
-        <input required type="email" id="email" name="name" class="logfields" placeholder="Enter Email" >
+        <input required type="email" id="email" name="email" class="logfields" placeholder="Enter Email" >
 
-        <!-- <label class="loglbl">Password</label>
-        <input required type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
-        <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
-         -->
         <label class="loglbl" for="email">Phone Number</label>
+
         <div style="display: flex;">
         <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
         
-        <label>Male<input type="radio" name="gender"></label><label>Female<input name="gender" type="radio"></label>
+        <label>Male<input type="radio" value="male" name="gender"></label>
+        <label>Female<input name="gender"  value="female" type="radio"></label>
     </div>
         <label class="loglbl" for="initpass">Password</label>
         <input required type="password" id="initpass" name="password" class="logfields" placeholder="Password" >
@@ -47,12 +45,12 @@
         <input required type="password" id="confirmpass" name="password" class="logfields" placeholder="Password" >
         <label class="loglbl" for="add"> Address </label>
         <div style="display: flex;">
-        <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
-        
+            <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
+            
         <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
     </div>
         <label class="loglbl" for="pincode"> District </label>
-        <select class="logfields"><option>Udupi</option><option>Dakshina Kannada</option></select>
+        <select class="logfields" name="district"><option>Udupi</option><option>Dakshina Kannada</option></select>
         <button type="reset" class="logbtn">Reset</button>
         <button type="submit" class="logbtn">Submit</button>
         
