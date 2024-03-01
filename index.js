@@ -64,3 +64,16 @@ let passtxtbox=document.getElementById("logpassfield");
   changefocus(repass,address);
   changefocus(address,pin);
   changefocus(pin,district);
+
+
+  //this function does required validation  for sign up form for on submit
+  function  validatesignup(){
+    if(pass.value !== repass.value)
+    {
+alert("Passwords do not match");
+return false;
+    }
+    return true;
+  }
+  
+  
