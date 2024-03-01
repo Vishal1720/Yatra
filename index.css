@@ -94,6 +94,7 @@ a:hover{
     
 }
 #logshowpass{
+    display: none;
    position:fixed;
    top:53.56%;
    left:100%;
@@ -123,4 +124,29 @@ a:hover{
 }
 #signupanchor{
     margin-right: 1rem;
+}
+#telnumber{
+    width:50%;
+}
+#male,#female
+{
+    font-size: 1.5rem;
+    color:white;
+    text-shadow: -1.1px -1.1px 0 #000,  
+    1.1px -1.1px 0 #000,
+   -1.1px  1.1px 0 #000,
+    1.1px  1.1px 0 #000;
+    letter-spacing: 0.5px;
+ 
+}
+
+#gdiv{
+    display: flex;
+    align-items: center;
+}
+.radio{
+    margin-right: 5px;
+}
+.radio,#male,#female{
+    padding: 12px;
 }

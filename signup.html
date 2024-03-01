@@ -34,13 +34,14 @@
         <label class="loglbl" for="email">Email</label>
         <input required type="email" id="email" name="email" class="logfields" placeholder="Enter Email" >
 
-        <label class="loglbl" for="email">Phone Number</label>
+        <label class="loglbl"  for="email">Phone Number</label>
 
         <div style="display: flex;">
         <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
-        
-        <label>Male<input type="radio" id="radio" value="male" name="gender"></label>
-        <label>Female<input name="gender"  value="female" type="radio"></label>
+        <div id="gdiv">
+        <label id="male"><input type="radio" id="radio" class="radio" value="male" name="gender">Male</label>
+        <label id="female"><input name="gender" class="radio"  value="female" type="radio">Female</label>
+    </div>
     </div>
         <label class="loglbl" for="initpass">Password</label>
         <input required type="password" id="initpass" name="password" class="logfields" placeholder="Password" >
@@ -52,8 +53,12 @@
             
         <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
     </div>
+
         <label class="loglbl" for="pincode"> District </label>
-        <select class="logfields"  id="district" name="district"><option>Udupi</option><option>Dakshina Kannada</option></select>
+        <select class="logfields"  id="district" name="district">
+            <option>Udupi</option>
+            <option>Dakshina Kannada</option>
+        </select>
         <button type="reset" class="logbtn">Reset</button>
         <button type="submit" class="logbtn">Submit</button>
         
