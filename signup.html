@@ -47,18 +47,28 @@
         <input required type="password" id="initpass" name="password" class="logfields" placeholder="Password" >
         <label class="loglbl" for="confirmpass"> Confirm Password</label>
         <input required type="password" id="confirmpass" name="password" class="logfields" placeholder="Password" >
+        
+        <div>
         <label class="loglbl" for="add"> Address </label>
+        <label class="loglbl" for="pincode" style="margin-left:52%;"> District </label>
+        
+    </div>
         <div style="display: flex;">
             <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
-            
-        <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
+            <!-- <select class="logfields"  id="district" name="district">
+                <option>Udupi</option>
+                <option>Dakshina Kannada</option>
+            </select> -->
+            <input class="logfields" id="district" name="district" list="districts">
+            <datalist id="districts">
+                <option>Udupi</option>
+                <option>Dakshina Kannada</option>
+            </datalist>
+        
     </div>
 
-        <label class="loglbl" for="pincode"> District </label>
-        <select class="logfields"  id="district" name="district">
-            <option>Udupi</option>
-            <option>Dakshina Kannada</option>
-        </select>
+        
+        <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
         <button type="reset" class="logbtn">Reset</button>
         <button type="submit" class="logbtn">Submit</button>
         

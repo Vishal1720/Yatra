@@ -116,7 +116,9 @@ a:hover{
     width: 50%;
 }
 #address{
-    width:75%;
+    
+    max-width: 59%;
+    min-width: 59%;
 }
 #pin{
     height: 3rem;
@@ -149,4 +151,9 @@ a:hover{
 }
 .radio,#male,#female{
     padding: 12px;
+}
+#district{
+    height: fit-content;
+    width: 41%;
+    
 }

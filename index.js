@@ -31,9 +31,9 @@ let passtxtbox=document.getElementById("logpassfield");
   
 
   function changefocus(firstbox,secondbox){
-    firstbox.addEventListener('keypress',(e)=>{
+    firstbox.addEventListener('keydown',(e)=>{
     
-      if(e.key == "Enter")
+      if(e.key == "Enter" || e.key == 'ArrowDown')
       {
         e.preventDefault();
         console.log("Working");
@@ -63,8 +63,8 @@ let passtxtbox=document.getElementById("logpassfield");
   changefocus(rad,pass);
   changefocus(pass,repass);
   changefocus(repass,address);
-  changefocus(address,pin);
-  changefocus(pin,district);
+  changefocus(address,district);
+  changefocus(district,pin);
 
 
   //this function does required validation  for sign up form for on submit
