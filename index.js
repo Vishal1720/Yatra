@@ -24,3 +24,43 @@ else{
   logpassfield.type="password";
 }
   }
+  
+  //login
+  let emailtxtbox=document.getElementById("email");
+let passtxtbox=document.getElementById("logpassfield");
+  
+
+  function changefocus(firstbox,secondbox){
+    firstbox.addEventListener('keypress',(e)=>{
+    
+      if(e.key == "Enter")
+      {
+        e.preventDefault();
+        console.log("Working");
+  secondbox.focus();
+      }
+    })
+  }
+
+  changefocus(emailtxtbox,passtxtbox);
+
+  //signup
+
+  var username=document.querySelector("#username");
+  var lname=document.querySelector('#lname');
+  var email=document.querySelector("#email");
+  var telnumber=document.querySelector("#telnumber");
+  // var rad=document.querySelector('#radio');
+  var pass=document.querySelector("#initpass");
+  var repass=document.querySelector("#confirmpass");
+  var  address=document.querySelector("#address");
+  var pin=document.querySelector("#pin");
+  var district=document.querySelector("#district");
+  changefocus(username,lname);
+  changefocus(lname,email);
+  changefocus(email,telnumber);
+  changefocus(telnumber,pass);
+  changefocus(pass,repass);
+  changefocus(repass,address);
+  changefocus(address,pin);
+  changefocus(pin,district);

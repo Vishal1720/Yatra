@@ -39,7 +39,7 @@
         <div style="display: flex;">
         <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
         
-        <label>Male<input type="radio" value="male" name="gender"></label>
+        <label>Male<input type="radio" id="radio" value="male" name="gender"></label>
         <label>Female<input name="gender"  value="female" type="radio"></label>
     </div>
         <label class="loglbl" for="initpass">Password</label>
@@ -53,7 +53,7 @@
         <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
     </div>
         <label class="loglbl" for="pincode"> District </label>
-        <select class="logfields" name="district"><option>Udupi</option><option>Dakshina Kannada</option></select>
+        <select class="logfields"  id="district" name="district"><option>Udupi</option><option>Dakshina Kannada</option></select>
         <button type="reset" class="logbtn">Reset</button>
         <button type="submit" class="logbtn">Submit</button>
         
