@@ -94,7 +94,7 @@ a:hover{
     
 }
 #logshowpass{
-    display: none;
+    display: none;/*Temporarily hidden waiting for fix*/
    position:fixed;
    top:53.56%;
    left:100%;
