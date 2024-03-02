@@ -129,6 +129,14 @@ a:hover{
 }
 #telnumber{
     width:50%;
+    
+}
+#telnumber::-webkit-inner-spin-button,
+#telnumber::-webkit-outer-spin-button,
+#pin::-webkit-inner-spin-button,
+#pin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 #male,#female
 {
