@@ -66,13 +66,36 @@ let passtxtbox=document.getElementById("logpassfield");
   changefocus(address,district);
   changefocus(district,pin);
 
+telnumber.addEventListener('input',()=>{
+  if(telnumber.value.length > 10)
+  {
+    telnumber.value=telnumber.value.slice(0,10);
+  }
+});
 
+pin.addEventListener('input',()=>{
+  if(pin.value.length >6)
+  {
+    pin.value=pin.value.slice(0,6);
+  }
+})
   //this function does required validation  for sign up form for on submit
   function  validatesignup(){
     if(pass.value !== repass.value)
     {
 alert("Passwords do not match");
 return false;
+    }
+    if(telnumber.value.length<10)
+    {
+      alert("Please enter a valid phone number");
+      return false;
+    }
+    if(pin.value.length<6)
+    {
+      alert('Please enter a valid 6 digit pincode');
+    return false;
+    
     }
     return true;
   }
