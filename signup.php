@@ -23,6 +23,14 @@ $dist=$_POST['district'];
 $fullname=$name." ".$lname;
 
 
+//checking for duplicate entries for email
+$query2=$con->query("SELECT * FROM `yatra`.`regform` WHERE email='$email' ");
+if($query2->num_rows>=1)
+{
+   echo "<script>alert('Email already exists. Please try another one')</script>";
+    exit();
+}
+else{
 $query="INSERT INTO `yatra`.`regform`(`email`, `name`, `password`, `gender`, `phone`, `address`, `district`, `pincode`) 
 VALUES 
 ('$email','$fullname','$password','$gender','$phone','$address','$dist','$pincode')";
@@ -33,9 +41,8 @@ if(!$res)
    die("error");
 }
 else{
-   Header("location:login.html");
+   Header("location:login.php");
 }
-echo "<h1>Fname-$name Lname-$lname -Email-$email -Phone$phone
- -gender$gender pass$password 
-address$address pincode$pincode district$dist</h1>";
+
+}
 $con->close();

@@ -55,19 +55,22 @@
     </div>
         <div style="display: flex;">
             <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
-            <input class="logfields" placeholder="Enter district" id="district" name="district" list="districts">
+            <div>
+            <input class="logfields" style="margin-bottom: 0px;" placeholder="Enter district" id="district" name="district" list="districts">
             <datalist id="districts">
                 <option>Udupi</option>
                 <option>Dakshina Kannada</option>
             </datalist>
-        
-    </div>
+            <input type="number" id="pin" name="pin" style="margin-top: 0.4rem;" class="logfields" required placeholder="Enter pincode"/>
+        </div>
+        </div>
 
         
-        <input type="number" id="pin" name="pin" class="logfields" required placeholder="Enter pincode"/>
-        <button type="reset" class="logbtn">Reset</button>
-        <button type="submit" class="logbtn">Submit</button>
         
+        <div style="display: flex;">
+        <button type="reset" id="signreset" class="logbtn">Reset</button>
+        <button type="submit" id="signsubmit" class="logbtn">Submit</button>
+    </div>
     </form>
     
 <script src="index.js"></script>
