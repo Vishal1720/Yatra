@@ -165,3 +165,10 @@ a:hover{
     width: 41%;
     
 }
+#eyesignup{
+    width:33px;
+    height: 24px;
+    position: fixed;
+    top:55%;
+    left: 86%;
+}

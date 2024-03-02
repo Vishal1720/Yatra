@@ -45,7 +45,7 @@ let passtxtbox=document.getElementById("logpassfield");
   changefocus(emailtxtbox,passtxtbox);
 
   //signup
-
+ 
   var username=document.querySelector("#username");
   var lname=document.querySelector('#lname');
   var email=document.querySelector("#email");
@@ -98,6 +98,21 @@ return false;
     
     }
     return true;
+  }
+
+  function eyeswitchsign(){
+    let passfield1=document.getElementById("initpass");
+    
+    let passfield2=document.getElementById("confirmpass");
+    let eyesignicon=document.getElementById('eyesignup');
+    if(passfield1.type == "password" ){
+eyesignicon.src="noeye-icon.png";
+passfield1.type="text";
+passfield2.type="text"}else{
+  eyesignicon.src="eye-icon.png";
+  passfield1.type="password";
+passfield2.type="password";
+}
   }
   
   
