@@ -94,11 +94,11 @@ a:hover{
     
 }
 #logshowpass{
-    display: none;/*Temporarily hidden waiting for fix*/
+   
    position:fixed;
    top:53.56%;
-   left:100%;
-   width:8%;
+   left:80%;
+   width:6%;
    
 }
 #signform{
