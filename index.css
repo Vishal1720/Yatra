@@ -51,6 +51,7 @@ a{
     text-shadow: 0.1rem 0.1rem 0.1rem black;
     
     padding: 1rem;
+    
     transition:0.3s;
     border-radius: 2rem;
    margin-top: 2%;
@@ -58,7 +59,7 @@ a{
     height: inherit;
 }
 a:hover{
-    font-size:2.3rem;
+    font-size:2.25rem;
     background-color: rgba(248, 248, 255,0.3);
 }
 .highlight{
@@ -164,13 +165,20 @@ a:hover{
 }
 #district{
     height: fit-content;
-    width: 41%;
+    width: 93%;
     
 }
 #eyesignup{
     width:33px;
     height: 24px;
     position: fixed;
-    top:53%;
+    top:62%;
     left: 86%;
+}
+#signreset,#signsubmit
+{
+    width: 50%;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(74, 74, 214);
 }

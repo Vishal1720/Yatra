@@ -19,7 +19,7 @@ if($logval->num_rows>=1)
     Header("Location:userhomepage.html");
 }
 else{
-    echo '<script>window.alert("Error  in login");</script>';
+    echo '<script>alert("Error  in login");</script>';
      
 }
 
@@ -59,6 +59,7 @@ else{
         <button type="reset" class="logbtn">Reset</button>
         <button type="submit" class="logbtn">Submit</button>
     </form>
+    
 <script src="index.js"></script>
 </body>
 </html>
