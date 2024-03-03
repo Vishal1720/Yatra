@@ -49,7 +49,7 @@ else{echo "<script>alert(' $name is not registered');</script>";}
     <div id="navlinks">
         <a href="index.html">About</a>
         <a href="" class="highlight">Login</a>
-        <a href="signup.html" id="signupanchor">Signup</a></div>
+        <a href="signup.php" id="signupanchor">Signup</a></div>
     </header>
       
     <form id="logform" method="post" action="login.php">
