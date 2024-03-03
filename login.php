@@ -1,5 +1,5 @@
 <?php 
-if(isset($_POST['name'])) {
+if(isset($_POST['name']) && isset($_POST['password'])) {
 $servername="localhost";
 $user="root";
 $password="";
@@ -19,7 +19,10 @@ if($logval->num_rows>=1)
     Header("Location:userhomepage.html");
 }
 else{
-    echo '<script>alert("Error  in login");</script>';
+    $res2=$con->query("Select * from `yatra`.`regform` where  email='$name'");
+ if($res2->num_rows==1)
+ {echo "<script>alert('password is not correct')</script>";}
+else{echo "<script>alert(' $name is not registered');</script>";}
      
 }
 
