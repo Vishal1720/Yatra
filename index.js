@@ -4,17 +4,14 @@ let eyeicon=document.querySelector("#logshowpass");
 window.addEventListener('wheel', function(event) {
     if (event.deltaY > 0) {
       // Scrolling down
-      console.log('Scrolling down');
-    //   nav.style.visibility="hidden"
 nav.style.top="-18rem";
     } else {
       // Scrolling up
-      console.log('Scrolling up');
-    //   nav.style.visibility="visible"
     nav.style.top="0px";
     }
   });
   
+  //function  to show password in login form
   const showpassword=()=>{
     let logpassfield=document.getElementById("logpassfield");
     if(logpassfield.type === "password"){
@@ -74,12 +71,14 @@ telnumber.addEventListener('input',()=>{
   }
 });
 
+//limiting pin to 6 digits
 pin.addEventListener('input',()=>{
   if(pin.value.length >6)
   {
     pin.value=pin.value.slice(0,6);
   }
-})
+});
+
   //this function does required validation  for sign up form for on submit
   function  validatesignup(){
     if(pass.value !== repass.value)
@@ -165,7 +164,9 @@ return false;
     if(passfield1.type == "password" ){
 eyesignicon.src="noeye-icon.png";
 passfield1.type="text";
-passfield2.type="text"}else{
+passfield2.type="text"}
+else
+{
   eyesignicon.src="eye-icon.png";
   passfield1.type="password";
 passfield2.type="password";

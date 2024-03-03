@@ -26,7 +26,10 @@
 </header>
     <form id="signform" method="post" action="signup.php" onsubmit="validatesignup()">
         <h2>Sign Up Form</h2>
+        <div>
         <label class="loglbl" for="usernname">First name</label>
+        <label class="loglbl" for="lname" style="margin-left:38%;">Last name</label>
+    </div>
         <div style="display: flex;">
             <input required type="text" id="username" name="name" class="logfields" placeholder="Enter First Name" >
             <input required type="text" id="lname" name="lname" class="logfields" placeholder="Enter Last Name" >
@@ -34,8 +37,10 @@
         <label class="loglbl" for="email">Email</label>
         <input required type="email" id="email" name="email" class="logfields" placeholder="Enter Email" >
 
+         <div>
         <label class="loglbl"  for="email">Phone Number</label>
-
+        <label class="loglbl"  for="male" style="margin-left: 33.7%;">Gender</label>
+    </div>
         <div style="display: flex;">
         <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
         <div id="gdiv">

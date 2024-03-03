@@ -131,7 +131,7 @@ a:hover{
     margin-right: 1rem;
 }
 #telnumber{
-    width:50%;
+    width:48%;
     
 }
 #telnumber::-webkit-inner-spin-button,
@@ -181,4 +181,14 @@ a:hover{
     padding: 0.5rem;
     font-weight: bold;
     background-color: rgb(74, 74, 214);
+    transition: 1s;
+}
+#signreset:hover,#signsubmit:hover
+{
+    background-color:chocolate;
+}
+.loglbl{
+    color:white;
+    text-shadow: 1.3px 1.3px 0.8px rgb(24, 22, 22);
+   
 }
