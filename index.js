@@ -53,6 +53,8 @@ let passtxtbox=document.getElementById("logpassfield");
   var repass=document.querySelector("#confirmpass");
   var  address=document.querySelector("#address");
   var pin=document.querySelector("#pin");
+  pin.addEventListener("wheel",(e)=>{e.preventDefault()});
+
   var district=document.querySelector("#district");
   changefocus(username,lname);
   changefocus(lname,email);
