@@ -25,7 +25,7 @@ else{
 else{echo "<script>alert(' $name is not registered');</script>";}
      
 }
-
+$con->close();
 }
 ?>
 <!DOCTYPE html>
@@ -59,8 +59,11 @@ else{echo "<script>alert(' $name is not registered');</script>";}
         <label class="loglbl">Password</label>
         <input required  type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
         <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
-        <button type="reset" class="logbtn">Reset</button>
-        <button type="submit" class="logbtn">Submit</button>
+        
+        <div style="display: flex;">
+        <button type="reset" id="logreset" class="logbtn">Reset</button>
+        <button type="submit" id="logsubmit" class="logbtn">Submit</button>
+    </div>
     </form>
     
 <script src="index.js"></script>
