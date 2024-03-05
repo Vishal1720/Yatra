@@ -57,7 +57,7 @@ else{
         paymentObject.open();
     }
   }*/
-=======
+
   
   //login
   let emailtxtbox=document.getElementById("email");
