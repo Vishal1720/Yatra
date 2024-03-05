@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin:0;padding:0;
     box-sizing: border-box;
@@ -191,4 +192,53 @@ a:hover{
     color:white;
     text-shadow: 1.3px 1.3px 0.8px rgb(24, 22, 22);
    
+}
+
+/* about */
+
+/* .imgslidercontainer{
+    display: grid;
+    flex-direction: column;
+    margin: auto;
+    
+    place-items: center;
+    
+    padding: 2%;
+    background-color: rgb(255, 107, 108);
+    color: wheat;
+} */
+.imgcontainer{
+    display: flex;
+    
+    width: 100vw;
+    height: 50vh;
+    
+}
+
+
+#cover{
+width: 100%;
+height:800px;
+display: grid;
+place-items: center;
+background-image: url("cover.jpeg");
+background-position: center;
+background-size: cover;
+}
+#tagline{
+    font-family: "Inter", sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 1px rgb(1, 1, 1);
+}
+
+.sliderimgs
+{
+    width: 1800px;
+    height:800px;
+}
+#logdiv{
+    height: 418px;
+    display: flex;  
+    
 }

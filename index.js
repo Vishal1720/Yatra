@@ -175,4 +175,14 @@ passfield2.type="password";
 }
   }
   
+  var img1=document.getElementById('img1');
+  img1.style.transition="5s";
+let initmargin=0;
+  function addmarginleft(img1)
+  {
+    img1.style.marginleft=initmargin+"200px";
+  }
+  setInterval(()=>{
+    addmarginleft(img1);
+  },1000);
   

@@ -52,8 +52,10 @@ $con->close();
         <a href="signup.php" id="signupanchor">Signup</a></div>
     </header>
       
+    <div id="logdiv">
+        
     <form id="logform" method="post" action="login.php">
-        <h2>Login Form</h2>
+        <h2>User Login</h2>
         <label class="loglbl">Name</label>
         <input id="email" required type="email" name="name" class="logfields" placeholder="Enter registered email" >
         <label class="loglbl">Password</label>
@@ -65,6 +67,8 @@ $con->close();
         <button type="submit" id="logsubmit" class="logbtn">Submit</button>
     </div>
     </form>
+    
+</div>
     
 <script src="index.js"></script>
 </body>
