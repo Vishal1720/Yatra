@@ -22,7 +22,7 @@ else{
   logpassfield.type="password";
 }
   }
-<<<<<<< HEAD
+
 
 
 
@@ -57,6 +57,8 @@ else{
         paymentObject.open();
     }
   }*/
+
+  
 
   
   //login
@@ -212,4 +214,4 @@ passfield2.type="password";
   }
   
   
->>>>>>> a5cf7e04b0117304a2c5cfe02bff9fa52d304841
+
