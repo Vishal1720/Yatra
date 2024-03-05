@@ -29,21 +29,19 @@ body{
 }
 #navbar{
     position: sticky;
-    top: 0%;
+    top: 0px;
     transition: 0.4s;
     display: flex;
-   
+   flex-direction: row;
 }
 
 #navlinks{
     margin-left:20rem;
     background-color: rgba(240, 248, 255,0.2);
     border-radius: 2rem;
-    height:100%;
-    
-    text-align: center;
-    
-
+   display: flex;
+   flex-direction: row;
+   
 }
 a{
     color: white;
@@ -51,17 +49,20 @@ a{
     text-decoration: none;
     margin-left: 1rem;
     text-shadow: 0.1rem 0.1rem 0.1rem black;
-    margin-top: -10rem;
+    
     padding: 1rem;
+    
     transition:0.3s;
-    border-radius: 4rem;
-    margin-bottom:3rem;
+    border-radius: 2rem;
+   margin-top: 2%;
+   margin-bottom: 2%;
+    height: inherit;
 }
 a:hover{
-    font-size:2.3rem;
+    font-size:2.25rem;
     background-color: rgba(248, 248, 255,0.3);
 }
-#highlight{
+.highlight{
     background-color: rgba(248, 248, 255,0.3);
 }
 #logform{
@@ -94,10 +95,11 @@ a:hover{
     
 }
 #logshowpass{
-   position: absolute;
-   top:12.56rem;
-   left:20rem;
-   width:2rem;
+   
+   position:fixed;
+   top:58.56%;
+   left:80%;
+   width:6%;
    
 }
 #signform{
@@ -115,9 +117,78 @@ a:hover{
     width: 50%;
 }
 #address{
-    width:75%;
+    
+    max-width: 59%;
+    min-width: 59%;
+    max-height: 100px;
+    min-height: 100px;
 }
 #pin{
     height: 3rem;
     margin-top:1.5rem;
+}
+#signupanchor{
+    margin-right: 1rem;
+}
+#telnumber{
+    width:48%;
+    
+}
+#telnumber::-webkit-inner-spin-button,
+#telnumber::-webkit-outer-spin-button,
+#pin::-webkit-inner-spin-button,
+#pin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#male,#female
+{
+    font-size: 1.5rem;
+    color:white;
+    text-shadow: -1.1px -1.1px 0 #000,  
+    1.1px -1.1px 0 #000,
+   -1.1px  1.1px 0 #000,
+    1.1px  1.1px 0 #000;
+    letter-spacing: 0.5px;
+ 
+}
+
+#gdiv{
+    display: flex;
+    align-items: center;
+}
+.radio{
+    margin-right: 5px;
+}
+.radio,#male,#female{
+    padding: 12px;
+}
+#district{
+    height: fit-content;
+    width: 93%;
+    
+}
+#eyesignup{
+    width:33px;
+    height: 24px;
+    position: fixed;
+    top:62%;
+    left: 86%;
+}
+#signreset,#signsubmit,#logreset,#logsubmit
+{
+    width: 50%;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: rgb(74, 74, 214);
+    transition: 1s;
+}
+#signreset:hover,#signsubmit:hover
+{
+    background-color:chocolate;
+}
+.loglbl{
+    color:white;
+    text-shadow: 1.3px 1.3px 0.8px rgb(24, 22, 22);
+   
 }
