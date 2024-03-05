@@ -22,6 +22,44 @@ else{
   logpassfield.type="password";
 }
   }
+
+
+
+
+  
+  /*const displayRazorpay = (amount)=>{
+    if(amount === ""){
+    alert("please enter amount");
+    }else{
+      var options = {
+        key: "rzp_test_YCsMZnFVUYsSjM",
+        key_secret:"6InftqEninCAQt8ZzAsdGs5B",
+        amount: amount *100,
+        currency:"INR",
+        name:"My Space",
+        description:"for testing purpose",
+        handler: function(response){
+          alert(response.razorpay_payment_id);
+        },
+        prefill: {
+          name:"Aneesh",
+          email:"abcd@gmail.com",
+          contact:"234567890",
+        },
+        notes:{
+          address:"Razorpay Corporate office"
+        },
+        theme: {
+          color:" #ff5e00"
+        }
+      };
+      const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
+    }
+  }*/
+
+  
+
   
   //login
   let emailtxtbox=document.getElementById("email");
@@ -186,3 +224,4 @@ let initmargin=0;
     addmarginleft(img1);
   },1000);
   
+
