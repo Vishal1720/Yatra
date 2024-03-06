@@ -16,13 +16,13 @@ $logval=$con->query("SELECT * FROM `yatra`.`adminregform` WHERE email='$name' an
 
 if($logval->num_rows>=1)
 {
-    Header("Location:userhomepage.html");
+    Header("Location:adminlogin.html");
 }
 else{
     $res2=$con->query("Select * from `yatra`.`regform` where  email='$name'");
  if($res2->num_rows==1)
  {echo "<script>alert('password is not correct')</script>";}
-else{echo "<script>alert(' $name is not registered');</script>";}
+else{echo "<script>alert(' $name is not registered as an admin');</script>";}
      
 }
 $con->close();
