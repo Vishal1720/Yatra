@@ -213,15 +213,17 @@ passfield2.type="password";
 }
   }
   
-  var img1=document.getElementById('img1');
-  img1.style.transition="5s";
-let initmargin=0;
-  function addmarginleft(img1)
-  {
-    img1.style.marginleft=initmargin+"200px";
-  }
-  setInterval(()=>{
-    addmarginleft(img1);
-  },1000);
+//   var img1=document.getElementById('img1');
+//   img1.style.transition="5s";
+//   img1.style.border="2px solid black";
+// let initmargin=0;
+//   function addmarginleft(img1)
+//   {
+//     initmargin=initmargin+200
+//     img1.style.marginleft=initmargin+"px";
+//   }
+//   var a=setInterval(()=>{
+//     addmarginleft(img1);
+//   },1000);
   
 

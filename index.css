@@ -43,21 +43,21 @@ body{
    display: flex;
    flex-direction: row;
    
+   
 }
-a{
+a,select{
     color: white;
     font-size:2.2rem;
     text-decoration: none;
     margin-left: 1rem;
     text-shadow: 0.1rem 0.1rem 0.1rem black;
-    
     padding: 1rem;
-    
     transition:0.3s;
     border-radius: 2rem;
    margin-top: 2%;
    margin-bottom: 2%;
     height: inherit;
+    line-height: 10px;
 }
 a:hover{
     font-size:2.25rem;
@@ -210,8 +210,9 @@ a:hover{
 .imgcontainer{
     display: flex;
     
-    width: 100vw;
-    height: 50vh;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
     
 }
 
@@ -242,3 +243,4 @@ background-size: cover;
     display: flex;  
     
 }
+

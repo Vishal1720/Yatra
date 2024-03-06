@@ -48,7 +48,7 @@ $con->close();
         <h4 style="display: inline;">Yatra</h4></figure>
     <div id="navlinks">
         <a href="index.html">About</a>
-        <a href="" class="highlight">Login</a>
+        <a href="adminlogin.html" class="highlight">Login</a>
         <a href="signup.php" id="signupanchor">Signup</a></div>
     </header>
       
