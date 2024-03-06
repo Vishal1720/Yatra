@@ -29,9 +29,12 @@
         <label class="loglbl">Password</label>
         <input required type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
         <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
-        <button type="reset" class="logbtn">Reset</button>
-        <button type="submit" class="logbtn">Submit</button>
-    </form>
+        
+    <div style="display: flex;">
+        <button type="reset" id="logreset" class="logbtn">Reset</button>
+        <button type="submit" id="logsubmit" class="logbtn">Submit</button>
+    </div>
+</form>
 <script src="index.js"></script>
 </body>
 </html>
