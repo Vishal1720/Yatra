@@ -1,19 +1,7 @@
 <?php
-
+require "connection.php";
 if(isset($_POST['email']))
 {
-$servername="localhost";
-$username="root";
-$password="";
-$con=mysqli_connect($servername,$username,$password);
-
-if(!$con)
-{
-   die("Done"); 
-}
-
-
-
 $name= $_POST['name'];
 $lname=$_POST['lname'];
 $email=$_POST['email'];
@@ -31,14 +19,12 @@ $query2=$con->query("SELECT * FROM `yatra`.`regform` WHERE email='$email' ");
 if($query2->num_rows>=1)
 {
    echo "<script>alert('Email already exists. Please try another one')</script>";
-    
 }
 else{
 $query="INSERT INTO `yatra`.`regform`(`email`, `name`, `password`, `gender`, `phone`, `address`, `district`, `pincode`) 
 VALUES 
 ('$email','$fullname','$password','$gender','$phone','$address','$dist','$pincode')";
 $res=$con->query($query);
-
 if(!$res)
 {
    die("error");

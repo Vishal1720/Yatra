@@ -1,15 +1,7 @@
 <?php 
+require "connection.php";//stops execution if connection.php is not found
+
 if(isset($_POST['name']) && isset($_POST['password'])) {
-$servername="localhost";
-$user="root";
-$password="";
-$con=mysqli_connect($servername,$user, $password);
-
-if(!$con)
-{
-    die("Error");
-}
-
 $name=$_POST['name'];
 $pass=$_POST['password'];
 $logval=$con->query("SELECT * FROM `yatra`.`regform` WHERE email='$name' and password='$pass' ");
