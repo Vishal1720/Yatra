@@ -14,6 +14,20 @@
 
     <title>Yatra</title>
     <link rel="stylesheet" href="./index.css"> 
+    <style>
+        #img1{
+            transition: margin-left 10s ease-in-out;
+        }
+        .sliderimgs{
+            width:1117px;
+            height: 600px;
+           
+           
+        }
+        .imgcontainer{
+            margin: auto;
+        }
+    </style>
 </head>
 <body >
  
@@ -26,16 +40,35 @@
 </header>
 <div id="cover"><h1 id="tagline">Your Gateway to Unforgettable Adventures</h1></div>
 
-<h1>Packages offered</h1>
+<h1>Places to see</h1>
 
-<div class="imgcontainer">
+<div class="imgcontainer" id="imgcontainer" >
 <img id="img1" class="sliderimgs" src="SasihithluBeach.jpg">
-<img id="img2" class="sliderimgs" src="surathkal.jpg">
-<img id="img3" class="sliderimgs" src="SasihithluBeach.jpg">
-<img id="img4" class="sliderimgs" src="SasihithluBeach.jpg">
+<img id="img2" class="sliderimgs" src="Sultan_Battery.jpg">
+<img id="img3" class="sliderimgs" src="kadri temple mangalore.jpg">
+<img id="img4" class="sliderimgs" src="st aloysius chapel.jpg">
 </div>
 
+   <script>  var count=1117,imgchange=true, numimages=4;
+    
+    finalmargin=1117*(numimages-1);
+ 
+    setInterval(changeimage=()=>{
    
-<script src="index.js"></script>
+   if(imgchange)
+   {
+     document.getElementById("img1").style.marginLeft=`-${finalmargin}px` ;
+   imgchange=false;
+   }
+   else{
+     document.getElementById("img1").style.marginLeft="-80px";
+     imgchange=true;
+   }
+  },10010);
+     </script>
+
+  
+    
+
 </body>
 </html>
