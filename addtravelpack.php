@@ -1,6 +1,5 @@
 <?php
 require 'connection.php';
-
 $title=$_POST['title'];
 $desc=$_POST['desc'];
 $cover=$_POST['cover'];
@@ -10,7 +9,7 @@ $drop=$_POST['drop'];
 $cost=$_POST['cost'];
 
 echo "$title $desc $cover $date $pickup $drop $cost";
-$query="INSERT INTO `yatra`.`tpackages`(`title`, `description`, 
+$query="INSERT INTO `tpackages` (`title`, `description`, 
 `cover`, `date`, `pickuplocation`, `droplocation`, `cost`)
  VALUES ('$title','$desc','$cover','$date',
  '$pickup','$drop','$cost') ";
