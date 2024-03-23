@@ -66,7 +66,7 @@ p{
     <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
         <h4 style="display: inline;">Yatra</h4></figure>
     <div id="navlinks">
-        <a href="travelpackages.html" class="highlight"> Packages</a>
+        <a href="travelpackages.php" class="highlight"> Packages</a>
         </div>
      
 </header>
@@ -113,7 +113,7 @@ p{
     <span><strong>Pick up Location:</strong><span>{$item['pickuplocation']}</span><br>
     <span><strong>Drop Location:</strong><span>{$item['droplocation']}</span><br>
     <span><strong>Date:</strong><span>{$item['date']}</span><br>
-    <button id='signsubmit' style='width:fit-content;'class='logbtn'>Submit</button>
+    <button id='signsubmit' style='width:fit-content;'class='logbtn'>Book</button>
     </p>
     
 </div>
