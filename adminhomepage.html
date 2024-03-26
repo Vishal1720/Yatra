@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form id="signform" method="post" action="addtravelpack.php" onsubmit="validatesignup()">
+    <form id="signform" method="post" action="addtravelpack.php" >
         <h2>Add Travel Packages</h2>
 
         <div>
@@ -17,8 +17,8 @@
     <input required type="text"  name="title" class="logfields" placeholder="Enter Title of Package" >
         <label class="loglbl" for="desc">Description</label>
         <input required type="text" id="desc" name="desc" class="logfields" placeholder="Enter Description" >
-<label class="loglbl" for="cover">Coverphoto</label>
-<input class="logfields" name="cover" type="file" accept="image/*" > 
+<label class="loglbl" for="cover">Coverphoto </label>
+<input class="logfields" name="cover" type="file" accept="image/*" required > 
     <label class="loglbl" for="dt"> Date </label>
     <input type="date" name="dt" class="logfields" id="dt">
     <div>
