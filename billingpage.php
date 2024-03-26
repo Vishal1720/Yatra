@@ -21,6 +21,7 @@
 <meta name="theme-color" content="#ffffff">
     <title>Yatra</title>
     <link rel="stylesheet" href="./index.css"> 
+   
 </head>
 <body >
     <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
@@ -36,7 +37,7 @@
     $res=$con->query($query);
     foreach($res as $item)
     {echo "
-        <form id='logform' method='post' action='login.php'>
+        <form style=' background-color: rgba(69,177,141,0.3);' id='logform' method='post' action='login.php'>
         <h1 class='loglbl'>{$item['title']}</h1>
         <label class='loglbl'>Date</label>
         <input class='logfields' type='text' value={$item['date']} disabled>
