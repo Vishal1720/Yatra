@@ -58,7 +58,10 @@ p{
     justify-content: center; */
    
 }
-
+form{
+    width: 100%;
+    height: 100%;
+}
 
     </style>
 </head>
@@ -106,16 +109,20 @@ p{
     <img class='travelimg' src='cover.jpeg'>
 
 <div class='contentdiv'>
+<form action='billingpage.php' method='post'>
+ 
     <h1>{$item['title']}</h1>
+    
     <p>
     <span>{$item['description']}</span><br>
     <span><strong>Cost per person:</strong><span>{$item['cost']}</span><br>
     <span><strong>Pick up Location:</strong><span>{$item['pickuplocation']}</span><br>
     <span><strong>Drop Location:</strong><span>{$item['droplocation']}</span><br>
     <span><strong>Date:</strong><span>{$item['date']}</span><br>
-    <button id='signsubmit' style='width:fit-content;'class='logbtn'>Book</button>
+ <input type='number' name='tid' value={$item['ID']} style='display:none;'>
+    <button id='signsubmit' type='submit' style='width:fit-content;'class='logbtn'>Book</button>
     </p>
-    
+    </form>
 </div>
     </div>";
         }
