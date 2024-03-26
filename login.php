@@ -48,7 +48,7 @@ $con->close();
         
     <form id="logform" method="post" action="login.php">
         <h2>User Login</h2>
-        <label class="loglbl">Name</label>
+        <label class="loglbl">Email</label>
         <input id="email" required type="email" name="name" class="logfields" placeholder="Enter registered email" >
         <label class="loglbl">Password</label>
         <input required  type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
