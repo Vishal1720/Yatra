@@ -8,7 +8,10 @@ $pickup=$_POST['pickup'];
 $drop=$_POST['drop'];
 $cost=$_POST['cost'];
 
-echo "$title $desc $cover $date $pickup $drop $cost";
+if(isset($title) && isset($desc) && isset ($cover) && isset($date) && isset($pickup) && isset($drop) && isset($cost))
+{
+
+//echo "$title $desc $cover $date $pickup $drop $cost";
 $query="INSERT INTO `tpackages` (`title`, `description`, 
 `cover`, `date`, `pickuplocation`, `droplocation`, `cost`)
  VALUES ('$title','$desc','$cover','$date',
@@ -19,3 +22,4 @@ $query="INSERT INTO `tpackages` (`title`, `description`,
 die("End");
  }
  echo "Inserted successfully";
+}
