@@ -8,7 +8,10 @@ $logval=$con->query("SELECT * FROM `regform` WHERE email='$name' and password='$
 
 if($logval->num_rows>=1)
 {
-    Header("Location:userhomepage.html");
+    session_start();
+	$_SESSION["email"] = $name;
+    $_SESSION["status"]='user';
+    Header("Location:userhomepage.php");
 }
 else{
     $res2=$con->query("Select * from `regform` where  email='$name'");
