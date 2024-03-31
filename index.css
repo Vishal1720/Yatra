@@ -95,14 +95,7 @@ a:hover{
     padding: 0.5rem;
     
 }
-#logshowpass{
-   
-   position:fixed;
-   top:58.56%;
-   left:80%;
-   width:6%;
-   
-}
+
 #signform{
     display: flex;
     flex-direction: column;
@@ -244,3 +237,11 @@ background-size: cover;
     
 }
 
+#logshowpass{
+   
+   position:fixed;
+   top:72.56%;
+   left:80%;
+   width:6%;
+   
+}
