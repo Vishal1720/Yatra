@@ -36,7 +36,7 @@ $con->close();
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
     <title>Yatra</title>
-    <link rel="stylesheet" href="./index.css"> 
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body >
     <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
@@ -55,7 +55,13 @@ $con->close();
         <input id="email" required type="email" name="name" class="logfields" placeholder="Enter registered email" >
         <label class="loglbl">Password</label>
         <input required  type="password" name="password" class="logfields" id="logpassfield" placeholder="Enter password" >
-        <img src="eye-icon.png" onclick="showpassword()" id="logshowpass" alt="show password" >
+        <img src="eye-icon.png" onclick="showpassword()" style="
+   
+   position:fixed;
+   top:60.56%;
+   left:80%;
+   width:6%;
+   " id="logshowpass" alt="show password" >
         
         <div style="display: flex;">
         <button type="reset" id="logreset" class="logbtn">Reset</button>
