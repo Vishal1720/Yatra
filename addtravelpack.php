@@ -21,5 +21,13 @@ $query="INSERT INTO `tpackages` (`title`, `description`,
  {
 die("End");
  }
+ if($_SESSION['status'] == 'admin' and isset($_SESSION['email']))
  echo "<script>alert('Inserted Successfully');window.location.href='adminhomepage.php'</script>";
+
+ if($_SESSION['status'] == 'superadmin' and isset($_SESSION['email']))
+ echo "<script>alert('Inserted Successfully');window.location.href='superadminhomepage.php'</script>";
+
+
+
+
 }
