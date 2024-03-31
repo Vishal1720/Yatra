@@ -36,7 +36,7 @@ object-fit: contain;
 
 }
 
-h1{
+.h1{
     background-color: #E2C044;
     padding: 3px;
     height: 25%;
@@ -58,7 +58,7 @@ p{
     justify-content: center; */
    
 }
-form{
+.form{
     width: 100%;
     height: 100%;
 }
@@ -66,37 +66,16 @@ form{
     </style>
 </head>
 <body>
-    <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
-        <h4 style="display: inline;">Yatra</h4></figure>
-    <div id="navlinks">
-        <a href="travelpackages.php" class="highlight"> Packages</a>
-        </div>
-     
-</header>
-
-    <!-- <div class="package">
-
-    <img class="travelimg" src="cover.jpeg">
-
-<div class="contentdiv">
-    <h1>Heading</h1>
-    <p>This is a brief description about the package</p>
-</div>
-    </div>
-    <div class="package">
-
-        <img class="travelimg" src="bg1.jpg">
-    
-    <div class="contentdiv">
-        <h1>Heading</h1>
-        <p class="description">This is a brief description about the package</p>
-    </div> -->
-    <!-- </div> -->
     <?php 
     require "connection.php";
+   
+    $status= $_SESSION['status'];
+    $useremail=$_SESSION['email'];
     $query="Select * from tpackages";
     $res=$con->query($query);
 
+if(($status == 'user' or $status == 'admin' or $status == 'superadmin') and isset($useremail))
+{
     foreach($res as $item)
         {
         //     echo "{$item['cover']}";
@@ -109,9 +88,9 @@ form{
     <img class='travelimg' src='cover.jpeg'>
 
 <div class='contentdiv'>
-<form action='billingpage.php' method='post'>
+<form action='billingpage.php' class='form' method='post'>
  
-    <h1>{$item['title']}</h1>
+    <h1 class='h1'>{$item['title']}</h1>
     
     <p>
     <span>{$item['description']}</span><br>
@@ -126,6 +105,7 @@ form{
 </div>
     </div>";
         }
+    }
         // function getMimeType($imageData) {
         //     // Implement logic to determine the MIME type of the image data (e.g., using header detection)
         //     return 'image/jpeg'; // Replace with actual MIME type detection logic
