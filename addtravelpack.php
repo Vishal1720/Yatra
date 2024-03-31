@@ -21,5 +21,5 @@ $query="INSERT INTO `tpackages` (`title`, `description`,
  {
 die("End");
  }
- echo "Inserted successfully";
+ echo "<script>alert('Inserted Successfully');window.location.href='adminhomepage.php'</script>";
 }
