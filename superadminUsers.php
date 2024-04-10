@@ -56,6 +56,13 @@ $_SESSION['userview']=$view;
     function submitForm(){
 document.getElementById("viewform").submit();
     }
+    function confirmsubmission()
+    {
+        var a=window.confirm("Are you sure")
+        if(a)return true;
+        else
+        return false;
+    }
     </script>
 </body>
 </html>
