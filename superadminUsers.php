@@ -9,12 +9,17 @@
 <body>
     <?php
     include "connection.php";
-    if(!isset($userview))$userview = 'User';?>
+    
+    if(!isset($_SESSION['userview']))$_SESSION['userview'] = 'User';?>
     <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
+        if(isset($_POST['view']))
+        {
 $view=$_POST['view'];
 $userview=$view;
+$_SESSION['userview']=$view;
+        }
     }
     ?>
     <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
@@ -28,21 +33,21 @@ $userview=$view;
 
 <form id="viewform" action="" method="post">
     <select onchange="submitForm()" style="background-color:black;color:white;text-align:center;font-size:1.3rem;margin-left:89%;margin-right:0px;height:fit-content;" name="view">
-<option <?php if($userview == 'User') echo 'selected'; ?> >User</option>
-<option <?php if($userview == 'Admin') echo 'selected'; ?>>Admin</option> 
-<option <?php if($userview == 'Packages') echo 'selected'; ?>>Packages</option> 
+<option <?php if($_SESSION['userview'] == 'User') echo 'selected'; ?> >User</option>
+<option <?php if($_SESSION['userview'] == 'Admin') echo 'selected'; ?>>Admin</option> 
+<option <?php if($_SESSION['userview'] == 'Packages') echo 'selected'; ?>>Packages</option> 
 </select>
 </form>
     <?php
-    if($userview == 'User')
+    if($_SESSION['userview'] == 'User')
     {
         include "userdetails.php";
     }
-    else if($userview == 'Admin')
+    else if($_SESSION['userview'] == 'Admin')
     {
         include "superadminAdminUsers.php";
     }
-    else if($userview == 'Packages'){
+    else if($_SESSION['userview'] == 'Packages'){
         include "tpackagesview.php";
     }
 
