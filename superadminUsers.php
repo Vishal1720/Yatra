@@ -30,6 +30,7 @@ $userview=$view;
     <select onchange="submitForm()" style="background-color:black;color:white;text-align:center;font-size:1.3rem;margin-left:89%;margin-right:0px;height:fit-content;" name="view">
 <option <?php if($userview == 'User') echo 'selected'; ?> >User</option>
 <option <?php if($userview == 'Admin') echo 'selected'; ?>>Admin</option> 
+<option <?php if($userview == 'Packages') echo 'selected'; ?>>Packages</option> 
 </select>
 </form>
     <?php
@@ -40,6 +41,9 @@ $userview=$view;
     else if($userview == 'Admin')
     {
         include "superadminAdminUsers.php";
+    }
+    else if($userview == 'Packages'){
+        include "tpackagesview.php";
     }
 
     ?>
