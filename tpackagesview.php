@@ -1,42 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   
-    <table>
-        <tr class="tpv">
-        
-    </tr>
-    </table>
-  
-</body>
-</html>
+
+
 
 <?php 
 include "connection.php";
-if(isset($_POST['dltbtn']))
+if(isset($_POST['dltbtnpack']))
 {
+    if(isset($_POST['idToDelete']))
+    {
     $idtodelete=$_POST['idToDelete'];
     deletepack($idtodelete);
+    }
 }
 function deletepack($idtbd)
-{global $con;
-    $query="delete from `tpackages` where ID='$idtbd' ";
-    
-    $res=$con->query($query);  
+{
+    global $con;
+    $query="delete from `tpackages` where ID='$idtbd' "; 
+    $con->query($query);  
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+
+    
     <style>
         table{
             margin: auto;
@@ -67,8 +50,9 @@ function deletepack($idtbd)
             font-weight: bold;
         }
     </style>
-</head>
-<body><?php
+
+
+    <?php
 if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
 {
 echo "
@@ -95,7 +79,7 @@ echo "
     <td>
     <form method='post'>
     <input name='idToDelete'  type='hidden' value='{$key['ID']}'>
-    <button class='dlt' name='dltbtn' type='submit'>Delete Package</button>
+    <button class='dlt' name='dltbtnpack' type='submit'>Delete Package</button>
     </form>
     </td>
     </tr>";
@@ -110,5 +94,3 @@ echo "
     
     </table>
     
-</body>
-</html>
