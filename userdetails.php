@@ -2,8 +2,11 @@
 include "connection.php";
 if(isset($_POST['dltbtn']))
 {
+    if(isset($_POST['emailToDelete']))
+    {
     $idtodelete=$_POST['emailToDelete'];
     deleteuser($idtodelete);
+    }
 }
 function deleteuser($emtbd)
 {global $con;
