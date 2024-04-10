@@ -25,27 +25,32 @@ function deleteadminuser($emtbd)
             font-size: 1.3rem;
         }
         table,th,td{
-            border: 3px solid whitesmoke;
+            border: 3.3px solid white;
             border-collapse: collapse;
             
         }
         td,th{
             padding: 10px;
+            text-align: center;
         }
-        th{
-            background-color: #14213D;
-            color: white;
+        th{background-color: #0C0C0C;
+           
+            color: #69DC9E;
         }
         td{
-            background-color: #56638A;
+            background-color: #BA5A31;
             color: azure;
             font-weight: 500;
         }
         .dlt{
             color: white;
             background-color: red;
-            padding: 5px;
+            padding: 7px;
+            
+            height: 100%;
             font-weight: bold;
+            font-size: 1.2rem;
+           
         }
     </style>
 </head>
@@ -70,7 +75,7 @@ echo "
         <td>{$key['contact']}</td>
 
     <td>
-    <form method='post'>
+    <form method='post' onsubmit='return confirmsubmission();'>
     <input name='emailToDelete'  type='hidden' value='{$key['email']}'>
     <button class='dlt' name='dltbtn' type='submit'>Delete User</button>
     </form>

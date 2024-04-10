@@ -58,7 +58,12 @@ if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
 echo "
     <table>
         <tr>
-        <th>ID</th><th>Title</th><th>description</th><th>date</th><th>Pickup</th><th>Drop</th><th>Delete</th>
+        <th>ID</th><th>Title</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Pickup</th>
+        <th>Drop</th>
+        <th>Delete</th>
         </tr>";
     
     $query3="Select * from tpackages";
@@ -77,7 +82,7 @@ echo "
         <td>{$key['pickuplocation']}</td>
         <td>{$key['droplocation']}</td>
     <td>
-    <form method='post'>
+    <form method='post' onsubmit='return confirmsubmission();'>
     <input name='idToDelete'  type='hidden' value='{$key['ID']}'>
     <button class='dlt' name='dltbtnpack' type='submit'>Delete Package</button>
     </form>

@@ -77,7 +77,7 @@ echo "
         <td>{$key['address']}</td><td>{$key['district']}</td>
         <td>{$key['pincode']}</td>
     <td>
-    <form method='post'>
+    <form method='post' onsubmit='return confirmsubmission();'>
     <input name='emailToDelete'  type='hidden' value='{$key['email']}'>
     <button class='dlt' name='dltbtn' type='submit'>Delete User</button>
     </form>
