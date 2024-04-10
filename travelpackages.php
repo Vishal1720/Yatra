@@ -78,15 +78,16 @@ if(($status == 'user' or $status == 'admin' or $status == 'superadmin') and isse
 {
     foreach($res as $item)
         {
-        //     echo "{$item['cover']}";
-        //    $imageData = base64_encode($item['cover']);
-        //  $src = 'data:image/png;base64,' . $imageData; // Adjust the MIME type accordingly
-       
-        //      echo "<img src='{$src}'>";
-             echo"<div class='package'>
-
-    <img class='travelimg' src='cover.jpeg'>
-
+             echo"<div class='package'>"
+?>
+   
+    <?php if (!empty($item['cover'])) : ?>
+        <img class='travelimg' src='data:image/jpeg;base64,<?php echo base64_encode($item['cover']); ?>' alt='Image from Database'>
+      <?php else : ?>
+        <p>No image found.</p>
+      <?php endif; ?>
+<?php
+echo "
 <div class='contentdiv'>
 <form action='billingpage.php' class='form' method='post'>
  
@@ -106,10 +107,6 @@ if(($status == 'user' or $status == 'admin' or $status == 'superadmin') and isse
     </div>";
         }
     }
-        // function getMimeType($imageData) {
-        //     // Implement logic to determine the MIME type of the image data (e.g., using header detection)
-        //     return 'image/jpeg'; // Replace with actual MIME type detection logic
-        //   }
     ?>
         
 </body>
