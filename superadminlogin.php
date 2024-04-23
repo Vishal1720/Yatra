@@ -4,7 +4,7 @@ require "connection.php";//stops execution if connection.php is not found
 if(isset($_POST['name']) && isset($_POST['password'])) {
 $name=$_POST['name'];
 $pass=$_POST['password'];
-$logval=$con->query("SELECT * FROM `yatra`.`superadminform` WHERE email='$name' and password='$pass' ");
+$logval=$con->query("SELECT * FROM `superadminform` WHERE email='$name' and password='$pass' ");
 
 if($logval->num_rows>=1)
 {
@@ -13,7 +13,7 @@ if($logval->num_rows>=1)
     Header("Location:superadminhomepage.php");
 }
 else{
-    $res2=$con->query("Select * from `yatra`.`superadminform` where  email='$name'");
+    $res2=$con->query("Select * from `superadminform` where  email='$name'");
  if($res2->num_rows==1)
  {
     echo "<script>alert('password is not correct')</script>";
