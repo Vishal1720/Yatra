@@ -3,7 +3,7 @@
     if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
     {
     echo "
-    <form id='signform' method='post' action='addtravelpack.php' >
+    <form id='signform' enctype='multipart/form-data' method='post' action='addtravelpack.php' >
         <h2>Add Travel Packages</h2>
 
         <div>
@@ -13,8 +13,9 @@
     <input required type='text'  name='title' class='logfields' placeholder='Enter Title of Package' >
         <label class='loglbl' for='desc'>Description</label>
         <input required type='text' id='desc' name='desc' class='logfields' placeholder='Enter Description' >
-<label class='loglbl' for='cover'>Coverphoto </label>
-<input class='logfields' name='cover' type='file' accept='image/*' required > 
+
+        <label class='loglbl' for='cover'>Coverphoto </label>
+<input class='logfields' name='cover' accept='image/*' type='file'  required > 
     <label class='loglbl' for='dt'> Date </label>
     <input type='date' name='dt' class='logfields' id='dt'>
     <div>
