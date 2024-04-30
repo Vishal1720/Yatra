@@ -50,6 +50,9 @@ function deleteuser($emtbd)
             padding: 5px;
             font-weight: bold;
         }
+        #updte{
+            background-color: blue;
+        }
     </style>
 </head>
 <body><?php
@@ -59,7 +62,7 @@ echo "
     <table>
         <tr>
         <th>Name</th><th>Email</th><th>Gender</th><th>Phone</th><th>Address</th><th>District</th><th>pincode</th>
-    <th>Delete</th></tr>";
+    <th>Delete</th><th>Update</th></tr>";
     
     $query3="Select * from regform";
     $res=$con->query($query3);
@@ -80,6 +83,12 @@ echo "
     <form method='post' onsubmit='return confirmsubmission();'>
     <input name='emailToDelete'  type='hidden' value='{$key['email']}'>
     <button class='dlt' name='dltbtn' type='submit'>Delete User</button>
+    </form>
+    </td>
+    <td>
+    <form method='post' action='updateuser.php'>
+    <input name='emailToUpdate'  type='hidden' value='{$key['email']}'>
+    <button class='dlt' id='updte' name='updbtn' type='submit'>Update</button>
     </form>
     </td>
     </tr>";
