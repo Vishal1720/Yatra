@@ -12,22 +12,22 @@
 
     <input required type='text'  name='title' class='logfields' placeholder='Enter Title of Package' >
         <label class='loglbl' for='desc'>Description</label>
-        <input required type='text' id='desc' name='desc' class='logfields' placeholder='Enter Description' >
+        <input required type='text' id='desc' name='desc' class='logfields' placeholder='Enter Description' required >
 
         <label class='loglbl' for='cover'>Coverphoto </label>
 <input class='logfields' name='cover' accept='image/*' type='file'  required > 
     <label class='loglbl' for='dt'> Date </label>
-    <input type='date' name='dt' class='logfields' id='dt'>
+    <input type='date' name='dt' class='logfields' id='dt' required>
     <div>
     <label class='loglbl' for='pickup'> Pickup </label>
     <label class='loglbl' for='drop'> Drop </label>
 </div>
         <div>
-            <input type='text'  id='pickup' style='width:47%' name='pickup' class='logfields' placeholder='Enter pickup location' >
-            <input type='text'  id='drop' style='width:47%' name='drop' class='logfields' placeholder='Enter drop location' >
+            <input type='text'  id='pickup' style='width:47%' name='pickup' class='logfields' placeholder='Enter pickup location'required>
+            <input type='text'  id='drop' style='width:47%' name='drop' class='logfields' placeholder='Enter drop location' required >
         </div>
         <label class='loglbl' for='drop'> Cost </label>
-        <input type='number' name='cost' id ='cost' class='logfields' placeholder='Enter cost of package'>
+        <input type='number' name='cost' id ='cost' class='logfields' placeholder='Enter cost of package' required>
     </div>
 
         
@@ -43,3 +43,4 @@
         window.location.href='index.html'</script>";
         
     }
+    
