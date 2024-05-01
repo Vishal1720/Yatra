@@ -46,6 +46,7 @@ $_SESSION['userview']=$view;
     }
     else if($_SESSION['userview'] == 'Admin')
     {
+        include 'updateadmin.php';
         include "superadminAdminUsers.php";
     }
     else if($_SESSION['userview'] == 'Packages'){
