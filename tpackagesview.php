@@ -55,6 +55,7 @@ function deletepack($idtbd)
     <?php
 if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
 {
+    include 'updatepackage.php';
 echo "
     <table>
         <tr>
@@ -63,7 +64,9 @@ echo "
         <th>Date</th>
         <th>Pickup</th>
         <th>Drop</th>
+        <th>Cost</th>
         <th>Delete</th>
+        <th>Update</th>
         </tr>";
     
     $query3="Select * from tpackages";
@@ -81,12 +84,21 @@ echo "
         <td>{$key['date']}</td>
         <td>{$key['pickuplocation']}</td>
         <td>{$key['droplocation']}</td>
+        <td>{$key['cost']}</td>
     <td>
     <form method='post' onsubmit='return confirmsubmission();'>
     <input name='idToDelete'  type='hidden' value='{$key['ID']}'>
     <button class='dlt' name='dltbtnpack' type='submit'>Delete Package</button>
     </form>
     </td>
+
+    <td>
+    <form method='post' action=''>
+    <input name='packtoUpdate'  type='hidden' value='{$key['ID']}'>
+    <button class='dlt' style='background-color:blue;' name='updbtnpack' type='submit'>Update Package</button>
+    </form>
+    </td>
+
     </tr>";
     }
 }
