@@ -58,6 +58,7 @@ function deleteuser($emtbd)
 <body><?php
 if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
 {
+    include "updateuser.php";
 echo "
     <table>
         <tr>
@@ -77,7 +78,8 @@ echo "
         <td>{$key['email']}</td>
         <td>{$key['gender']}</td>
         <td>{$key['phone']}</td>
-        <td>{$key['address']}</td><td>{$key['district']}</td>
+        <td>{$key['address']}</td>
+        <td>{$key['district']}</td>
         <td>{$key['pincode']}</td>
     <td>
     <form method='post' onsubmit='return confirmsubmission();'>
@@ -86,7 +88,7 @@ echo "
     </form>
     </td>
     <td>
-    <form method='post' action='updateuser.php'>
+    <form method='post' action=''>
     <input name='emailToUpdate'  type='hidden' value='{$key['email']}'>
     <button class='dlt' id='updte' name='updbtn' type='submit'>Update</button>
     </form>
