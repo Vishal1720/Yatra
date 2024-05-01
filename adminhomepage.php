@@ -11,7 +11,7 @@
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'> 
         <a href='adminUsers.php' > Users</a>
-        <a href='superadminaddtravelpack.php' class='highlight'> Add Packages</a>
+        <a href='' class='highlight'> Add Packages</a>
         </div>
 </header>
    <?php
