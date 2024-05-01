@@ -62,7 +62,7 @@ if( $_SESSION['status'] == 'superadmin')
 echo "
     <table>
         <tr>
-        <th>Name</th><th>Email</th><th>Contact</th><th>Delete</th></tr>";
+        <th>Name</th><th>Email</th><th>Contact</th><th>Delete</th><th>Update</th></tr>";
     $query3="Select * from adminregform";
     $res=$con->query($query3);
     if($res->num_rows>=1)
@@ -78,6 +78,11 @@ echo "
     <form method='post' onsubmit='return confirmsubmission();'>
     <input name='emailToDelete'  type='hidden' value='{$key['email']}'>
     <button class='dlt' name='dltbtn' type='submit'>Delete User</button>
+    </form></td>
+    <td>
+    <form method='post' action='' >
+    <input name='adminemailToUpdate'  type='hidden' value='{$key['email']}'>
+    <button class='dlt' name='updadminbtn' type='submit' style='background-color:blue;'>Update</button>
     </form>
     </td>
     </tr>";
