@@ -13,8 +13,8 @@
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'>
         <a href='' class='highlight'> Add Admin</a>
-        <a href='superadminUsers.php' class='highlight'> Users</a>
-        <a href='superadminaddtravelpack.php' class='highlight'> Add Packages</a>
+        <a href='superadminUsers.php' > Users</a>
+        <a href='superadminaddtravelpack.php' > Add Packages</a>
         </div>
         
      

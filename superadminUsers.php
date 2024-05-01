@@ -25,9 +25,9 @@ $_SESSION['userview']=$view;
     <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'>
-        <a href='superadminhomepage.php' class='highlight'> Add Admin</a>
+        <a href='superadminhomepage.php' > Add Admin</a>
         <a href='' class='highlight'> Users</a>
-        <a href='superadminaddtravelpack.php' class='highlight'> Add Packages</a>
+        <a href='superadminaddtravelpack.php' > Add Packages</a>
         </div>
 </header>
 

@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="index.css">
     <style>
         #select{
-            background-color: black;
+            background-color: rgb(19, 42, 19);
             color: white;
-            width: fit-content;
+            width:12%;
             text-align: center;
+            font-size: 1.5rem;
+            margin-left: 87%;
         }
         </style>
 </head>
@@ -34,8 +36,8 @@ $_SESSION['userview']=$view;
    <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'>
-        <a href='adminUsers.php' > Users</a>
-        <a href='superadminaddtravelpack.php' class='highlight'> Add Packages</a>
+        <a href='adminUsers.php' class='highlight'> Users</a>
+        <a href='adminhomepage.php' > Add Packages</a>
         </div>   
 </header>  
 <form id="viewform1" action="" method="post">
