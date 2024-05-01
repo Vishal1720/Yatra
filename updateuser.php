@@ -20,25 +20,34 @@ foreach($res as $userinfo)
 }
 
 ?>
-<link rel="stylesheet" href='index.css'>
+
 <style>.grid-container {
     display: grid;
     grid-template-columns: repeat(4, 0.1fr); /* 4 elements in each row */
-    grid-gap: 6px; /* Adjust as needed for spacing between elements */
+    grid-gap: 6px; 
 }
 
 .loglbl {
     margin-bottom: 5px; /* Adjust spacing between labels */
 }
-
+#updateform
+{
+    background-color: rgba(20, 33, 61,0.75);
+    backdrop-filter: blur(30px);
+    padding:20px;
+    padding-bottom: 10px;
+    border:2px solid white;
+}
     </style>
     <?php
     if(isset($updtemail,$updtname,$updtphone,$updtgender,$updtdistrict,$updtaddress,$updtpin))
     echo "
-<form id='updateform' method='post' action='' style='width:50%;margin:auto'>
-    <div class='grid-container'>
+
+<form id='updateform' method='post' action='' style='width:50%;margin:auto;margin-bottom:20px;'>
+<h2 class='loglbl'>Update $updtemail</h2>    
+<div class='grid-container'>
         <label class='loglbl'>Email</label>
-        <input id='email1' required type='email' name='upemail' value='$updtemail' class='logfields' placeholder='Enter email'>
+        <input id='email1' readonly required type='email' name='upemail' value='$updtemail' class='logfields' placeholder='Enter email'>
         
         <label class='loglbl'>Name</label>
         <input required type='text' name='upname' value='$updtname'; class='logfields' placeholder='Enter name'>
@@ -58,7 +67,7 @@ foreach($res as $userinfo)
         <label class='loglbl'>Pincode</label>
         <input required type='text' name='uppincode'  value='{$updtpin}'title='Enter valid pin number'  class='logfields' placeholder='Enter pincode'>
     </div>
-    <button type='submit' name='updatenewuser'  id='logsubmit' class='logbtn'>Submit</button>
+    <button type='submit' style='width:70%;margin-left:15%'  name='updatenewuser'  id='logsubmit' class='logbtn'>Update</button>
 </form>
 ";
 if(isset($_POST['updatenewuser']))
