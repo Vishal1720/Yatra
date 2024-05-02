@@ -48,6 +48,7 @@ function deletepack($idtbd)
             background-color: red;
             padding: 5px;
             font-weight: bold;
+            font-size: 1.1rem;
         }
     </style>
 
