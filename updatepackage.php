@@ -69,7 +69,7 @@ if(isset($tpid,$tpTitle,$tpDesc,$tpPickup,$tpDrop,$tpDate,$tpCost)){
           
            <label class='loglbl'>Cost</label>
            <input required type="text" pattern="[0-9]+" title="Enter valid cost" name="tpcost"
-            value="<?php echo $tpCost; ?>"; class='logfields' placeholder='Enter cost'>
+            value="<?php echo $tpCost; ?>" class='logfields' placeholder='Enter cost'>
            </div>
            <button type='submit' style='width:70%;margin-left:10%' id='logsubmit' name='updatepackquerybtn' class='logbtn'>Update</button>
 </form>
