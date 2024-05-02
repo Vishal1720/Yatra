@@ -39,37 +39,41 @@ foreach($res as $userinfo)
     border:2px solid white;
 }
     </style>
+
     <?php
     if(isset($updtemail,$updtname,$updtphone,$updtgender,$updtdistrict,$updtaddress,$updtpin))
-    echo "
+   {?> 
 
-<form id='updateform' method='post' action='' style='width:50%;margin:auto;margin-bottom:20px;'>
-<h2 class='loglbl'>Update $updtemail</h2>    
-<div class='grid-container'>
-        <label class='loglbl'>Email</label>
-        <input id='email1' readonly required type='email' name='upemail' value='$updtemail' class='logfields' placeholder='Enter email'>
+<form id="updateform" method="post" action="" style="width:50%;margin:auto;margin-bottom:20px;">
+<h2 class="loglbl">Update $updtemail</h2>    
+<div class="grid-container">
+        <label class="loglbl">Email</label>
+        <input id="email1" readonly required type="email" name="upemail" value="<?php echo $updtemail;?>" class="logfields" placeholder="Enter email">
         
-        <label class='loglbl'>Name</label>
-        <input required type='text' name='upname' value='$updtname'; class='logfields' placeholder='Enter name'>
+        <label class="loglbl">Name</label>
+        <input required type="text" name="upname" value="<?php echo $updtname;?>"  class="logfields" placeholder="Enter name">
         
-        <label class='loglbl'>Phone</label>
-        <input required type='text' name='upphone' pattern='{10}[0-9]' value='$updtphone'  class='logfields' placeholder='Enter phone'>
+        <label class="loglbl">Phone</label>
+        <input required type="text" name="upphone" pattern="{10}[0-9]" value="<?php echo $updtphone;?>"  class="logfields" placeholder="Enter phone">
         
-        <label class='loglbl'>Gender</label>
-        <input required type='text' name='upgender' value='$updtgender'; class='logfields' placeholder='Enter gender'>
+        <label class="loglbl">Gender</label>
+        <input required type="text" name="upgender" value="<?php echo $updtgender;?>" class="logfields" placeholder="Enter gender">
         
-        <label class='loglbl'>District</label>
-        <input required type='text' name='updistrict' value='$updtdistrict'; class='logfields' placeholder='Enter district'>
+        <label class="loglbl">District</label>
+        <input required type="text" name="updistrict" value="<?php echo $updtdistrict;?>" class="logfields" placeholder="Enter district">
         
-        <label class='loglbl'>Address</label>
-        <input required type='text' name='upaddress' value='$updtaddress'; class='logfields' placeholder='Enter address'>
+        <label class="loglbl">Address</label>
+        <input required type="text" name="upaddress" value="<?php echo $updtaddress;?>" class="logfields" placeholder="Enter address">
         
-        <label class='loglbl'>Pincode</label>
-        <input required type='text' name='uppincode'  value='{$updtpin}'title='Enter valid pin number'  class='logfields' placeholder='Enter pincode'>
+        <label class="loglbl">Pincode</label>
+        <input required type="text" name="uppincode"  value="<?php echo $updtpin;?>" title="Enter valid pin number"  class="logfields" placeholder="Enter pincode">
     </div>
-    <button type='submit' style='width:70%;margin-left:15%'  name='updatenewuser'  id='logsubmit' class='logbtn'>Update</button>
+    <button type="submit" style="width:70%;margin-left:15%"  name="updatenewuser"  id="logsubmit" class="logbtn">Update</button>
 </form>
-";
+
+<?php } ?>
+
+<?php
 if(isset($_POST['updatenewuser']))
 {
     $upemail=$_POST['upemail'];
@@ -77,7 +81,7 @@ if(isset($_POST['updatenewuser']))
     $upphone=$_POST['upphone'];
     $upgender=$_POST['upgender'];
     $updistrict=$_POST['updistrict'];
-    $upaddress=$_POST['upaddress'];
+    $upaddress=addslashes($_POST['upaddress']);
     $uppincode=$_POST['uppincode'];
     if(isset($upemail,$upname,$upphone,$upgender,$updistrict,$upaddress, $uppincode))
     {
