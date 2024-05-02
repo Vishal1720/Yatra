@@ -25,7 +25,7 @@ function deleteuser($emtbd)
     <style>
         table{
             margin: auto;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
         table,th,td{
             border: 3px solid whitesmoke;
@@ -49,6 +49,7 @@ function deleteuser($emtbd)
             background-color: red;
             padding: 5px;
             font-weight: bold;
+            font-size: 1.2rem;
         }
         #updte{
             background-color: blue;
@@ -90,7 +91,7 @@ echo "
     <td>
     <form method='post' action=''>
     <input name='emailToUpdate'  type='hidden' value='{$key['email']}'>
-    <button class='dlt' id='updte' name='updbtn' type='submit'>Update</button>
+    <input class='dlt' id='updte' value='Update' name='updbtn' type='submit'>
     </form>
     </td>
     </tr>";
