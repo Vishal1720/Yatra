@@ -48,28 +48,28 @@ if(isset($tpid,$tpTitle,$tpDesc,$tpPickup,$tpDrop,$tpDate,$tpCost)){
 <label class='loglbl'>Title</label>
 <input type='hidden' name='packid' value=" <?php echo $tpid; ?>">
         <input required type='text' name='tptitle'
-         value="<?php echo $tpTitle; ?>" class='logfields' placeholder='Enter title'>
+         value="<?php echo $tpTitle;?>" class='logfields' placeholder='Enter title'>
 
          <label class='loglbl'>Description</label>
         <input required type='text' name='tpdesc'
-         value=" <?php echo $tpDesc ?>"; class='logfields' placeholder='Enter description'>
+         value="<?php echo $tpDesc;?>" class='logfields' placeholder='Enter description'>
 
          <label class='loglbl'>Pickup</label>
          <input required type='text' name='tppickup'
-          value=" <?php echo $tpPickup ?>"; class='logfields' placeholder='Enter pickup location'>
+          value="<?php echo $tpPickup;?>" class='logfields' placeholder='Enter pickup location'>
 
           <label class='loglbl'>Drop</label>
          <input required type='text' name='tpdrop'
-          value=" <?php echo $tpDrop ?>"; class='logfields' placeholder='Enter drop location'>
+          value="<?php echo $tpDrop;?>" class='logfields' placeholder='Enter drop location'>
 
           <label class='loglbl'>Date</label>
           <input required type='date' name='tpdate'
-           value="<?php echo $tpDate; ?>"; class='logfields' placeholder='Enter date'>
+           value="<?php echo $tpDate;?>" class='logfields' placeholder='Enter date'>
           
           
            <label class='loglbl'>Cost</label>
            <input required type="text" pattern="[0-9]+" title="Enter valid cost" name="tpcost"
-            value="<?php echo $tpCost; ?>" class='logfields' placeholder='Enter cost'>
+            value="<?php echo $tpCost;?>" class='logfields' placeholder='Enter cost'>
            </div>
            <button type='submit' style='width:70%;margin-left:10%' id='logsubmit' name='updatepackquerybtn' class='logbtn'>Update</button>
 </form>
