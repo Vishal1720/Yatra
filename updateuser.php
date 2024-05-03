@@ -45,7 +45,7 @@ foreach($res as $userinfo)
    {?> 
 
 <form id="updateform" method="post" action="" style="width:50%;margin:auto;margin-bottom:20px;">
-<h2 class="loglbl">Update $updtemail</h2>    
+<h2 class="loglbl">Update <?php echo $updtemail;?></h2>    
 <div class="grid-container">
         <label class="loglbl">Email</label>
         <input id="email1" readonly required type="email" name="upemail" value="<?php echo $updtemail;?>" class="logfields" placeholder="Enter email">
