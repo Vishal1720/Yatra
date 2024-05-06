@@ -54,7 +54,7 @@ foreach($res as $userinfo)
         <input required type="text" name="upname" value="<?php echo $updtname;?>"  class="logfields" placeholder="Enter name">
         
         <label class="loglbl">Phone</label>
-        <input required type="text" name="upphone" pattern="{10}[0-9]" value="<?php echo $updtphone;?>"  class="logfields" placeholder="Enter phone">
+        <input required type="text" name="upphone" maxlength="10" pattern="[0-9]" value="<?php echo $updtphone;?>"  class="logfields" placeholder="Enter phone">
         
         <label class="loglbl">Gender</label>
         <input required type="text" name="upgender" value="<?php echo $updtgender;?>" class="logfields" placeholder="Enter gender">
