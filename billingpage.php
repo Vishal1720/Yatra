@@ -32,13 +32,14 @@
       
     <?php
     require "connection.php";
-    $id=$_POST['tid'];
+    $id=isset($_POST['tid'])?$_POST['tid']:'';
     $query="Select *  from tpackages where ID = '$id' ";
     $res=$con->query($query);
     foreach($res as $item)
     {echo "
-        <form style=' background-color: rgba(69,177,141,0.3);' id='logform' method='post' action='login.php'>
+        <form style='background-color: rgba(69,177,141,0.3);' id='logform' method='post' action='bookpackage.php'>
         <h1 class='loglbl'>{$item['title']}</h1>
+        <input type='hidden' name='packid' value='{$id}'>
         <label class='loglbl'>Date</label>
         <input class='logfields' type='text' value={$item['date']} disabled>
         <label class='loglbl'>Pickup Location</label>
