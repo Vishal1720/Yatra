@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yatra</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -18,18 +18,17 @@
     <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
         <h4 style='display: inline;'>Yatra</h4></figure>
     <div id='navlinks'>
-        <a href='travelpackages.php' class='highlight'> Packages</a>
+        <a href='userhomepage.php' class='highlight'> Packages</a>
+        <a href='usernotifications.php' >Notifications</a>
         </div>
         </header>";
         include 'travelpackages.php';
     }
     else{
         echo "<script>alert('Log in first');window.location.href = 'login.php';</script>";
-        
-        
     }
      ?>
-</header>
+
 
 </body>
 </html>
