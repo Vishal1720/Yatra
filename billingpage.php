@@ -44,7 +44,8 @@
     <script src="index.js"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-        document.getElementById('logsubmit').onclick = function() {
+        document.getElementById('logsubmit').onclick = function() 
+        {
             // Get the cost value
             var cost = document.getElementById('cost').value;
             // Create an object with order details
