@@ -35,13 +35,30 @@
                 <input class='logfields' type='text' value={$item['droplocation']} disabled>
                 <label class='loglbl'>Cost</label>
                 <input class='logfields' type='text' id='cost' value={$item['cost']} disabled>
+                <label class='loglbl'>Number of persons</label>
+                <input class='logfields' pattern='[0-9]{5}'   type='text' id='noOfPerson'
+                 value='1'  onkeyup='changecost()'>
                 <!-- Add an ID to the submit button -->
                 <input class='logbtn' id='logsubmit' style='width:100%;' type='button' value='Pay'>
-            </form>";
+            </form>
+            <script >
+            var originalcost={$item['cost']};
+         changecost=()=>{
+
+var numberPeople=document.getElementById('noOfPerson').value;
+var cost=document.getElementById('cost');
+if(numberPeople == 0)
+cost.value=Math.abs(originalcost);
+else
+cost.value=Math.abs(originalcost*numberPeople);
+
+        } 
+    </script>
+            ";
         }
     ?>
 
-    <script src="index.js"></script>
+    
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
         document.getElementById('logsubmit').onclick = function() 
@@ -57,14 +74,15 @@
                 "description": "Package Payment",
                 "handler": function(response) {
                     // Handle the success response here
-                    alert(response.razorpay_payment_id);
-                    alert(response.razorpay_order_id);
-                    alert(response.razorpay_signature);
+                    // alert(response.razorpay_payment_id);
+                    // alert(response.razorpay_order_id);
+                    // alert(response.razorpay_signature);
+                    document.getElementById('logform').submit();
                 },
-                "prefill": {
-                    "name": "", // You can pre-fill customer details here
-                    "email": ""
-                }
+                // "prefill": {
+                //     "name": "", // You can pre-fill customer details here
+                //     "email": ""
+                // }
             };
             var rzp1 = new Razorpay(options);
             rzp1.open();
