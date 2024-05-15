@@ -53,7 +53,7 @@
                 "key": "rzp_test_SMipGKSDJs7rGi",
                 "amount": cost * 100, // Razorpay accepts amount in paisa
                 "currency": "INR",
-                "name": "Your Company Name",
+                "name": "Yatra Travel Agency",
                 "description": "Package Payment",
                 "handler": function(response) {
                     // Handle the success response here
