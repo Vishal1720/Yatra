@@ -64,7 +64,6 @@ echo "
         <th>Drop</th>
         <th>Time of Order</th>
         <th>Delete</th>
-        <th>Update</th>
         </tr>";
     
     $query3="Select * from bookedpackages";
