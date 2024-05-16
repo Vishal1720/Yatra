@@ -27,7 +27,7 @@ if(isset($packid,$uemail))
 if($con->query($insertquery))
 {
     echo "<script>
-    alert('Successfully inserted');
+    alert('You have successfully booked $packname package');
     window.location.href='userhomepage.php';</script>";  
 }
 }
