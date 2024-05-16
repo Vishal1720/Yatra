@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperAdmin</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="index.css">
     <style>
         #select{
@@ -44,7 +44,7 @@ $_SESSION['userview']=$view;
 <select id='select' onchange='submitForm()' name='view'>
     <option <?php if($_SESSION['userview']=='User') echo "selected" ?> >User</option>
     <option <?php if($_SESSION['userview']=='Packages') echo "selected" ?> >Packages</option>
-    
+    <option value="BookedTable" <?php if($_SESSION['userview']=='BookedTable') echo "selected" ?> >Booked Table</option>
 </select>
     </form>
 <?php
@@ -53,6 +53,9 @@ $_SESSION['userview']=$view;
      include "userdetails.php";
  }else if($_SESSION['userview'] == 'Packages'){
     include "tpackagesview.php";
+}
+else if($_SESSION['userview'] == 'BookedTable'){
+    include "bookedpackagedetails.php";
 }
 ?>
 <script>
