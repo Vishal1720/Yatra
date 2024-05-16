@@ -73,16 +73,9 @@ cost.value=Math.abs(originalcost*numberPeople);
                 "name": "Yatra Travel Agency",
                 "description": "Package Payment",
                 "handler": function(response) {
-                    // Handle the success response here
                     // alert(response.razorpay_payment_id);
-                    // alert(response.razorpay_order_id);
-                    // alert(response.razorpay_signature);
-                    document.getElementById('logform').submit();
+                   document.getElementById('logform').submit();
                 },
-                // "prefill": {
-                //     "name": "", // You can pre-fill customer details here
-                //     "email": ""
-                // }
             };
             var rzp1 = new Razorpay(options);
             rzp1.open();
