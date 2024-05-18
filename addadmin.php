@@ -1,8 +1,8 @@
 <?php
 include "connection.php";
-$name=$_POST['name'];
+$name=addslashes($_POST['name']);
 $email=$_POST['email'];
-$pass=$_POST['password'];
+$pass=addslashes($_POST['password']);
 $phone=$_POST['phone'];
 if(isset($name) and isset($email) and isset($pass) and isset($phone))
 {
