@@ -35,6 +35,7 @@ die('Insertion failed');
  echo "<script>alert('Inserted Successfully');window.location.href='adminhomepage.php'</script>";
 
  if($_SESSION['status'] == 'superadmin' and isset($_SESSION['email']))
- echo "<script>alert('Inserted Successfully');window.location.href='superadminhomepage.php'</script>";
+ echo "<script>alert('Inserted Successfully');
+window.location.href='superadminhomepage.php'</script>";
 
 }

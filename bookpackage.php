@@ -39,6 +39,7 @@ echo "No val for user email or pack id";
 }
 }
 else{
-    echo "<script>alert('Dear user please login since you are not logged in properly');
+    echo "<script>
+    alert('Dear user please login since you are not logged in properly');
     window.location.href='login.php';</script>";
 }

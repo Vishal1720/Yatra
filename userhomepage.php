@@ -25,7 +25,8 @@
         include 'travelpackages.php';
     }
     else{
-        echo "<script>alert('Log in first');window.location.href = 'login.php';</script>";
+        echo "<script>alert('Log in first');
+        window.location.href = 'login.php';</script>";
     }
      ?>
 

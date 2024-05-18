@@ -40,7 +40,7 @@
     </form>";}
     else{
         echo "<script>alert('You do not have permission');
-        window.location.href='index.html'</script>";
+        window.location.href='index.php'</script>";
         
     }
     

@@ -16,7 +16,8 @@ if($logval->num_rows>=1)
 else{
     $res2=$con->query("Select * from `regform` where  email='$name'");
  if($res2->num_rows==1)
- {echo "<script>alert('password is not correct')</script>";}
+ {echo "<script>
+    alert('password is not correct')</script>";}
 else{echo "<script>alert(' $name is not registered');</script>";}
      
 }
@@ -42,7 +43,7 @@ $con->close();
     <header id="navbar"><figure><img id="logo" src="yatra.jpg" width="80rem" height="80rem"> 
         <h4 style="display: inline;">Yatra</h4></figure>
     <div id="navlinks">
-        <a href="index.html">About</a>
+        <a href="index.php">About</a>
         <a href="" class="highlight">Login</a>
         <a href="signup.php" id="signupanchor">Signup</a></div>
     </header>

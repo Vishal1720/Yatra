@@ -106,7 +106,7 @@ echo "
     }
     else{
         echo "<script>alert('You are not permitted to view this');
-        window.location.href='index.html'</script>";
+        window.location.href='index.php'</script>";
     }
 ?>
     

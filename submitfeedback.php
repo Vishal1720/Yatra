@@ -11,7 +11,7 @@ $query="INSERT INTO `feedbackform`(`username`, `email`, `message`)
  if($res)
  {
 echo "<script>alert('Feedback Submitted successfully');
-window.location.href='index.html';
+window.location.href='index.php';
 </script>";
  }
  else{
