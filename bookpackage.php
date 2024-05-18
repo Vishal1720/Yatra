@@ -17,11 +17,11 @@ if(isset($packid,$uemail))
     $packageDetails=$con->query($packageDetailsQuery);
     $packageDetails=$packageDetails->fetch_assoc();
 
-    $packname=$packageDetails['title'];
+    $packname=addslashes($packageDetails['title']);
 
-    $packpickup=$packageDetails['pickuplocation'];
+    $packpickup=addslashes($packageDetails['pickuplocation']);
 
-    $packdrop=$packageDetails['droplocation'];
+    $packdrop=addslashes($packageDetails['droplocation']);
 
     $insertquery="INSERT INTO `bookedpackages`(`useremail`, `packageid`, `uname`, `droploc`, `pickup`) VALUES ('$uemail','$packid','$uname','$packdrop','$packpickup')";
 if($con->query($insertquery))
