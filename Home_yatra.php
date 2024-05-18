@@ -59,8 +59,8 @@
         <div class="container">
             <h2>Contact Us</h2>
             <form method="post" action="">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="uname">Name:</label>
+                <input type="text" id="uname" name="uname" required>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>

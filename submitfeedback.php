@@ -1,8 +1,10 @@
 <?php
+$uname="";
 include "connection.php";
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['feedbtn']))
 {
-$uname=$_POST['username'];
+$uname=$_POST['uname'];
+
 $email=$_POST['email'];
 $message=addslashes($_POST['message']);
 $query="INSERT INTO `feedbackform`(`username`, `email`, `message`)
@@ -17,4 +19,4 @@ window.location.href='index.php';
  else{
     echo "<script>alert('Error inserting');</script>";
  }
-}
+}echo "$uname";
