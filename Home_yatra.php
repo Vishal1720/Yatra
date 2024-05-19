@@ -70,15 +70,10 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+
     <footer>
         <div class="container">
-            <p>&copy; 2024 Travel Agency. All rights reserved.</p>
-            <p>Follow us on:
-                <a href="#">Facebook</a> |
-                <a href="#">Twitter</a> |
-                <a href="#">Instagram</a>
-            </p>
+            <p>&copy; 2024 Yatra Travel Agency. All rights reserved.</p>
         </div>
     </footer>
     <?php include "submitfeedback.php";?>
