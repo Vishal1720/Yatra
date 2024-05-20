@@ -9,7 +9,7 @@ if(!$con)
 
 $name=$_POST['name'];
 $pass=$_POST['password'];
-$logval=$con->query("SELECT * FROM `adminregform` WHERE email='$name' and password='$pass' ");
+$logval=$con->query("SELECT * FROM `employee` WHERE email='$name' and password='$pass' ");
 
 if($logval->num_rows>=1)
 {

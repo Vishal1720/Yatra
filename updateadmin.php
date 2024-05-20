@@ -5,7 +5,7 @@ if(isset($_POST['updadminbtn']))
     if(isset($_POST['adminemailToUpdate']))
     {
         $adminemail= $_POST['adminemailToUpdate'];
-        $res=$con->query("Select * from `adminregform` where email='$adminemail' ");
+        $res=$con->query("Select * from `employee` where email='$adminemail' ");
         if($res->num_rows >=1)
         {
             foreach($res as $item)
@@ -55,7 +55,7 @@ echo "
             $ademail=$_POST['upadminemail'];
              $adphone=$_POST['upadmincontact'];
              $adname=$_POST['upadminname'];
-             $upadquery="UPDATE `adminregform` SET `email`='$ademail',`name`='$adname',`contact`='$adphone' WHERE `email`='$ademail'";
+             $upadquery="UPDATE `employee` SET `email`='$ademail',`name`='$adname',`contact`='$adphone' WHERE `email`='$ademail'";
            $res=$con->query($upadquery);
             }
         }

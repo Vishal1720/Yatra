@@ -6,9 +6,9 @@ $pass=addslashes($_POST['password']);
 $phone=$_POST['phone'];
 if(isset($name) and isset($email) and isset($pass) and isset($phone))
 {
-$query="INSERT INTO `adminregform`(`email`, `name`, `password`, `contact`) 
+$query="INSERT INTO `employee`(`email`, `name`, `password`, `contact`) 
 VALUES ('$email','$name','$pass','$phone')";
-$query2="Select * from `adminregform` where email='$email'";//checking if email is already registered
+$query2="Select * from `employee` where email='$email'";//checking if email is already registered
 $res2=$con->query($query2);
 if($res2->num_rows == 0)
 {

@@ -7,7 +7,7 @@ if(isset($_POST['dltbtn']))
 }
 function deleteadminuser($emtbd)
 {global $con;
-    $query="delete from `adminregform` where email='$emtbd' ";
+    $query="delete from `employee` where email='$emtbd' ";
     
     $res=$con->query($query);  
 }
@@ -63,7 +63,7 @@ echo "
     <table>
         <tr>
         <th>Name</th><th>Email</th><th>Contact</th><th>Delete</th><th>Update</th></tr>";
-    $query3="Select * from adminregform";
+    $query3="Select * from employee";
     $res=$con->query($query3);
     if($res->num_rows>=1)
     {
