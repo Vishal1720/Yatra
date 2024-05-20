@@ -19,7 +19,7 @@ if($logval->num_rows>=1)
     Header("Location:adminhomepage.php");
 }
 else{
-    $res2=$con->query("Select * from `yatra`.`regform` where  email='$name'");
+    $res2=$con->query("Select * from `yatra`.`user` where  email='$name'");
  if($res2->num_rows==1)
  {echo "<script>alert('password is not correct');
     window.location.href='adminlogin.html'</script>";}

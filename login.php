@@ -4,7 +4,7 @@ require "connection.php";//stops execution if connection.php is not found
 if(isset($_POST['name']) && isset($_POST['password'])) {
 $name=$_POST['name'];
 $pass=$_POST['password'];
-$logval=$con->query("SELECT * FROM `regform` WHERE email='$name' and password='$pass' ");
+$logval=$con->query("SELECT * FROM `user` WHERE email='$name' and password='$pass' ");
 
 if($logval->num_rows>=1)
 {
@@ -14,7 +14,7 @@ if($logval->num_rows>=1)
     Header("Location:userhomepage.php");
 }
 else{
-    $res2=$con->query("Select * from `regform` where  email='$name'");
+    $res2=$con->query("Select * from `user` where  email='$name'");
  if($res2->num_rows==1)
  {echo "<script>
     alert('password is not correct')</script>";}

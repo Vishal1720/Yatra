@@ -15,13 +15,13 @@ $fullname=$name." ".$lname;
 
 
 //checking for duplicate entries for email
-$query2=$con->query("SELECT * FROM `regform` WHERE email='$email' ");
+$query2=$con->query("SELECT * FROM `user` WHERE email='$email' ");
 if($query2->num_rows>=1)
 {
    echo "<script>alert('Email already exists. Please try another one')</script>";
 }
 else{
-$query="INSERT INTO `regform`(`email`, `name`, `password`, `gender`, `phone`, `address`, `district`, `pincode`) 
+$query="INSERT INTO `user`(`email`, `name`, `password`, `gender`, `phone`, `address`, `district`, `pincode`) 
 VALUES 
 ('$email','$fullname','$password','$gender','$phone','$address','$dist','$pincode')";
 $res=$con->query($query);

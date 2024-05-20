@@ -5,7 +5,7 @@ if(isset($_POST['updbtn']))
     if(isset($_POST['emailToUpdate']))
     {
     $idtoupdate=$_POST['emailToUpdate'];
-    $res=$con->query("Select * from `regform` where email='$idtoupdate' ");
+    $res=$con->query("Select * from `user` where email='$idtoupdate' ");
 foreach($res as $userinfo)
 {
     $updtemail= $userinfo['email'];
@@ -86,7 +86,7 @@ if(isset($_POST['updatenewuser']))
     if(isset($upemail,$upname,$upphone,$upgender,$updistrict,$upaddress, $uppincode))
     {
         global $con;
-        $query="UPDATE `regform` SET `name`='$upname',`gender`='$upgender',
+        $query="UPDATE `user` SET `name`='$upname',`gender`='$upgender',
         `phone`='$upphone',`address`='$upaddress',
         `district`='$updistrict',`pincode`='$uppincode'
          WHERE `email`='$upemail'";

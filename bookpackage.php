@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 $packid=isset($_POST["packid"])?$_POST["packid"]:null;
 if(isset($packid,$uemail))
 {
-    $userDetailsQuery="SELECT * FROM `regform` WHERE `email`='vishal198shetty@gmail.com';";
+    $userDetailsQuery="SELECT * FROM `user` WHERE `email`='vishal198shetty@gmail.com';";
     $userDetails=$con->query($userDetailsQuery);
     $userDetails=$userDetails->fetch_assoc();
     $uname=$userDetails['name'];

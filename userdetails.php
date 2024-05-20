@@ -10,7 +10,7 @@ if(isset($_POST['dltbtn']))
 }
 function deleteuser($emtbd)
 {global $con;
-    $query="delete from `regform` where email='$emtbd' ";
+    $query="delete from `user` where email='$emtbd' ";
     
     $res=$con->query($query);  
 }
@@ -66,7 +66,7 @@ echo "
         <th>Name</th><th>Email</th><th>Gender</th><th>Phone</th><th>Address</th><th>District</th><th>pincode</th>
     <th>Delete</th><th>Update</th></tr>";
     
-    $query3="Select * from regform";
+    $query3="Select * from user";
     $res=$con->query($query3);
     if($res->num_rows>=1)
     {
