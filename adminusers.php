@@ -48,6 +48,7 @@ $_SESSION['userview']=$view;
 </select>
     </form>
 <?php
+ include 'logoutfield.php';
  if($_SESSION['userview'] == 'User')
  {
      include "userdetails.php";

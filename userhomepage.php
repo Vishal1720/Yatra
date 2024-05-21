@@ -20,13 +20,15 @@
     <div id='navlinks'>
         <a href='userhomepage.php' class='highlight'> Packages</a>
         <a href='usernotifications.php' >Notifications</a>
-        </div>
-        </header>";
+
+        
+        </div>";
+        include 'logoutfield.php';
         include 'travelpackages.php';
     }
     else{
         echo "<script>alert('Log in first');
-        window.location.href = 'login.php';</script>";
+        window.location.href = 'login.php';</scrip>";
     }
      ?>
 

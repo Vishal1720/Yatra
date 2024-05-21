@@ -15,6 +15,8 @@
         </div>
 </header>
    <?php
+   include 'connection.php';
+    include 'logoutfield.php';
     include 'addtravelpackform.php';
    ?>
 </body>

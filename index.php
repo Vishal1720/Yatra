@@ -37,6 +37,7 @@
         <a href="" class="highlight">About</a>
         <a href="login.php">Login</a>
         <a href="signup.php" id="signupanchor">Signup</a></div>
+        
 </header>
 <div id="cover"><h1 id="tagline">Your Gateway to Unforgettable Adventures</h1></div>
 

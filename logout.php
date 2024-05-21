@@ -1,6 +1,5 @@
 <?php 
 include "connection.php";
-$_SESSION['status']='';
-$_SESSION['email']=null;
+session_destroy();
 Header("location:index.php");
 

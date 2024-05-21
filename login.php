@@ -10,7 +10,10 @@ if($logval->num_rows>=1)
 {
     session_start();
 	$_SESSION["email"] = $name;
+    
     $_SESSION["status"]='user';
+    if($res=$logval->fetch_assoc())
+    $_SESSION["name"]=$res['name'];//name from table user
     Header("Location:userhomepage.php");
 }
 else{

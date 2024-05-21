@@ -9,6 +9,7 @@
 <body>
     <?php
     include "connection.php";
+    include 'logoutfield.php';
     
     if(!isset($_SESSION['userview']))$_SESSION['userview'] = 'User';?>
     <?php

@@ -21,7 +21,9 @@
         <a href='userhomepage.php' > Packages</a>
         <a href='usernotifications.php' class='highlight'>Notifications</a>
         </div>
+
         </header>";
+        include 'logoutfield.php';
         include 'notifications.php';
     }
     else{

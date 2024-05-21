@@ -8,7 +8,8 @@
 </head>
 <body>
     <?php
-    include "connection.php";?>
+    include "connection.php";
+    include 'logoutfield.php';?>
     <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'>
