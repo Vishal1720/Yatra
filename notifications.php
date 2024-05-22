@@ -36,7 +36,9 @@ if(isset($_SESSION['email'],$_SESSION['status']))
         $row2=$res2->fetch_assoc();
 
         echo "You have successfully booked package {$row2['title']} 
-        from {$row2['pickuplocation']} to {$row2['droplocation']} scheduled on date {$row2['date']} 
+        from {$row2['pickuplocation']} to {$row2['droplocation']} scheduled on
+         date {$row2['date']} for
+        {$row['people']} persons with total cost of {$row['totalcost']}
         <strong>Date and time of Booking:</strong>{$row['timeoforder']}<br>";
         echo "</div>";
 
