@@ -15,5 +15,7 @@
              </div> 
         <script>
         logout=()=>{
+            var a=confirm("Are you sure you want to log out?");
+            if(a)
             window.location.href='logout.php';
         }</script>
