@@ -1,14 +1,20 @@
 <?php
 include "connection.php";
+
 if($_SESSION['status'] == 'user')
 {
 $uemail=isset($_SESSION["email"])?$_SESSION["email"]:null;
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
+    $noOfPeople=isset($_POST['noOfPerson'])?$_POST['noOfPerson']:1;
+    echo $noOfPeople;
+    
 $packid=isset($_POST["packid"])?$_POST["packid"]:null;
-if(isset($packid,$uemail))
+$totalCost=isset($_POST["cost"])?$_POST["cost"]:null;;
+if(isset($packid,$uemail,$totalCost))
 {
-    $userDetailsQuery="SELECT * FROM `user` WHERE `email`='vishal198shetty@gmail.com';";
+    
+    $userDetailsQuery="SELECT * FROM `user` WHERE `email`='$uemail';";
     $userDetails=$con->query($userDetailsQuery);
     $userDetails=$userDetails->fetch_assoc();
     $uname=$userDetails['name'];
@@ -23,7 +29,10 @@ if(isset($packid,$uemail))
 
     $packdrop=addslashes($packageDetails['droplocation']);
 
-    $insertquery="INSERT INTO `bookedpackages`(`useremail`, `packageid`, `uname`, `droploc`, `pickup`) VALUES ('$uemail','$packid','$uname','$packdrop','$packpickup')";
+    $insertquery="INSERT INTO `bookedpackages`(`useremail`, 
+    `packageid`, `uname`, `droploc`, `pickup`,`people`,`totalcost`)
+     VALUES ('$uemail','$packid','$uname','$packdrop',
+     '$packpickup','$noOfPeople','$totalCost')";
 if($con->query($insertquery))
 {
     echo "<script>
