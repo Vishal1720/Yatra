@@ -24,21 +24,28 @@
         $res = $con->query($query);
         foreach($res as $item) {
             echo "
-            <form style='background-color: rgba(69,177,141,0.3);' id='logform' method='post' action='bookpackage.php'>
-                <h1 class='loglbl'>{$item['title']}</h1>
+            <form style='background-color: rgba(69,177,141,0.3);' 
+            id='logform' method='post' action='bookpackage.php'>
+                
+            <h1 class='loglbl'>{$item['title']}</h1>
                 <input type='hidden' name='packid' value='{$id}'>
+               
                 <label class='loglbl'>Date</label>
-                <input class='logfields' type='text' value={$item['date']} disabled>
+                <input class='logfields' type='text' value={$item['date']} readonly>
+                
                 <label class='loglbl'>Pickup Location</label>
-                <input class='logfields' type='text' value={$item['pickuplocation']} disabled>
+                <input class='logfields' type='text' value={$item['pickuplocation']} readonly>
+                
                 <label class='loglbl'>Drop Location</label>
-                <input class='logfields' type='text' value={$item['droplocation']} disabled>
+                <input class='logfields' type='text' value={$item['droplocation']} readonly>
+                
                 <label class='loglbl'>Cost</label>
-                <input class='logfields' type='text' id='cost' value={$item['cost']} disabled>
+                <input  type='text' class='logfields' id='cost' name='cost' value='{$item['cost']}' readonly >
+                
                 <label class='loglbl'>Number of persons</label>
-                <input class='logfields' pattern='[0-9]{5}'   type='text' id='noOfPerson'
+                <input class='logfields' pattern='[0-9]{5}'   type='text' id='noOfPerson' name='noOfPerson'
                  value='1'  onkeyup='changecost()'>
-                <!-- Add an ID to the submit button -->
+              
                 <input class='logbtn' id='logsubmit' style='width:100%;' type='button' value='Pay'>
             </form>
             <script >
@@ -61,6 +68,7 @@ cost.value=Math.abs(originalcost*numberPeople);
     
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
+
         document.getElementById('logsubmit').onclick = function() 
         {
             // Get the cost value
