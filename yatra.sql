@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2024 at 07:44 AM
+-- Generation Time: May 22, 2024 at 07:06 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `email` varchar(200) NOT NULL,
+  `name` text NOT NULL,
   `password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -36,9 +37,9 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`email`, `password`) VALUES
-('vishal198shetty@gmail.com', 'Vishal1720'),
-('yaseen0731@gmail.com', 'Yaseen@0731');
+INSERT INTO `admin` (`email`, `name`, `password`) VALUES
+('vishal198shetty@gmail.com', 'Vishal', 'Vishal1720'),
+('yaseen0731@gmail.com', 'Yaseen', 'Yaseen@0731');
 
 -- --------------------------------------------------------
 
@@ -53,15 +54,18 @@ CREATE TABLE `bookedpackages` (
   `uname` text NOT NULL,
   `droploc` varchar(200) NOT NULL,
   `pickup` varchar(200) NOT NULL,
-  `timeoforder` timestamp NOT NULL DEFAULT current_timestamp()
+  `timeoforder` timestamp NOT NULL DEFAULT current_timestamp(),
+  `people` bigint(10) NOT NULL,
+  `totalcost` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `bookedpackages`
 --
 
-INSERT INTO `bookedpackages` (`ID`, `useremail`, `packageid`, `uname`, `droploc`, `pickup`, `timeoforder`) VALUES
-(13, 'vishal198shetty@gmail.com', 2, 'Vishal Shetty', 'Mangalore', 'Udupi', '2024-05-18 03:52:55');
+INSERT INTO `bookedpackages` (`ID`, `useremail`, `packageid`, `uname`, `droploc`, `pickup`, `timeoforder`, `people`, `totalcost`) VALUES
+(20, 'vishal198shetty@gmail.com', 2, 'Vishal Shetty', 'Mangalore', 'Udupi', '2024-05-22 04:53:40', 11, 11000),
+(21, 'vishal198shetty@gmail.com', 2, 'Vishal Shetty', 'Mangalore', 'Udupi', '2024-05-22 05:02:58', 5, 5000);
 
 -- --------------------------------------------------------
 
@@ -82,7 +86,6 @@ CREATE TABLE `employee` (
 
 INSERT INTO `employee` (`email`, `name`, `password`, `contact`) VALUES
 ('aneesh123@gmail.com', 'Aneesh', 'Aneesh123', 8308536993),
-('robin123@gmail.com', 'Robin', 'robin123', 9145377815),
 ('vishal198shetty@gmail.com', 'Vishal Shetty', 'Vishal1720', 8088835539);
 
 -- --------------------------------------------------------
@@ -103,7 +106,8 @@ CREATE TABLE `feedbackform` (
 --
 
 INSERT INTO `feedbackform` (`username`, `email`, `message`, `ID`) VALUES
-('aa', 'aasas@gmail.com', 'aaa', 3);
+('aa', 'aasas@gmail.com', 'aaa', 3),
+('Aneesh', 'bhataneesh51@gmail.com', 'good experience\r\n', 4);
 
 -- --------------------------------------------------------
 
@@ -210,13 +214,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `bookedpackages`
 --
 ALTER TABLE `bookedpackages`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `feedbackform`
 --
 ALTER TABLE `feedbackform`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tpackages`
