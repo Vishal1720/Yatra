@@ -28,7 +28,8 @@
     }
     else{
         echo "<script>alert('Log in first');
-        window.location.href = 'login.php';</scrip>";
+        window.location.href = 'login.php';
+        </script>";
     }
      ?>
 
