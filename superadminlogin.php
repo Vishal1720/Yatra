@@ -10,6 +10,8 @@ if($logval->num_rows>=1)
 {
   $_SESSION['email']= $name;
     $_SESSION['status']='superadmin';
+    if($res=$logval->fetch_assoc())
+    $_SESSION["name"]=$res['name'];//name from table admin
     Header("Location:superadminhomepage.php");
 }
 else{
