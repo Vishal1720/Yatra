@@ -62,6 +62,8 @@ echo "
         <th>Name</th>
         <th>Pickup</th>
         <th>Drop</th>
+        <th>Payment</th>
+        <th>People</th>
         <th>Time of Order</th>
         <th>Delete</th>
         </tr>";
@@ -79,6 +81,8 @@ echo "
         <td>{$key['uname']}</td>
         <td>{$key['pickup']}</td>
         <td>{$key['droploc']}</td>
+        <td>{$key['totalcost']}</td>
+        <td>{$key['people']}</td>
         <td>{$key['timeoforder']}</td>
     <td>
     <form method='post' onsubmit='return confirmDelete({$key['ID']} );'>

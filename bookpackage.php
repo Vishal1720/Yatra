@@ -29,14 +29,15 @@ if(isset($packid,$uemail,$totalCost))
 
     $packdrop=addslashes($packageDetails['droplocation']);
 
+
     $insertquery="INSERT INTO `bookedpackages`(`useremail`, 
-    `packageid`, `uname`, `droploc`, `pickup`,`people`,`totalcost`)
+    `packageid`, `uname`, `droploc`, `pickup`,`people`,`totalcost`,`payid`)
      VALUES ('$uemail','$packid','$uname','$packdrop',
-     '$packpickup','$noOfPeople','$totalCost')";
+     '$packpickup','$noOfPeople','$totalCost','{$_POST['payid']}')";
 if($con->query($insertquery))
 {
     echo "<script>
-    alert('You have successfully booked $packname package');
+    alert('You have successfully booked $packname  package');
     window.location.href='userhomepage.php';</script>";  
 }
 }

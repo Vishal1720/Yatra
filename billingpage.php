@@ -28,8 +28,9 @@
             id='logform' method='post' action='bookpackage.php'>
                 
             <h1 class='loglbl'>{$item['title']}</h1>
-                <input type='hidden' name='packid' value='{$id}'>
+            <input type='hidden' name='packid' value='{$id}'>
                
+            <input type='hidden' name='payid' id='payid' value=''>
                 <label class='loglbl'>Date</label>
                 <input class='logfields' type='text' value={$item['date']} readonly>
                 
@@ -43,8 +44,9 @@
                 <input  type='text' class='logfields' id='cost' name='cost' value='{$item['cost']}' readonly >
                 
                 <label class='loglbl'>Number of persons</label>
-                <input class='logfields' pattern='[0-9]{5}'   type='text' id='noOfPerson' name='noOfPerson'
-                 value='1'  onkeyup='changecost()'>
+                <input class='logfields' pattern='[0-9]{5}' 
+                  type='text' id='noOfPerson' name='noOfPerson' autofocus
+                 value='1' onkeyup='changecost()'>
               
                 <input class='logbtn' id='logsubmit' style='width:100%;' type='button' value='Pay'>
             </form>
@@ -53,6 +55,7 @@
          changecost=()=>{
 
 var numberPeople=document.getElementById('noOfPerson').value;
+
 var cost=document.getElementById('cost');
 if(numberPeople == 0)
 cost.value=Math.abs(originalcost);
@@ -81,7 +84,7 @@ cost.value=Math.abs(originalcost*numberPeople);
                 "name": "Yatra Travel Agency",
                 "description": "Package Payment",
                 "handler": function(response) {
-                    // alert(response.razorpay_payment_id);
+                    document.getElementById("payid").value=response.razorpay_payment_id;
                    document.getElementById('logform').submit();
                 },
             };
