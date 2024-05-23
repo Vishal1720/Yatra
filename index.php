@@ -42,5 +42,8 @@
 <div id="cover"><h1 id="tagline">Your Gateway to Unforgettable Adventures</h1></div>
 
 <?php include "connection.php";include "Home_yatra.php";?>
+<script src="index.js">
+
+</script>
 </body>
 </html>
