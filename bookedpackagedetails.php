@@ -21,7 +21,7 @@ function deletebookedDetails($idtbd)
     <style>
         table{
             margin: auto;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
         table,th,td{
             border: 3px solid black;
@@ -65,6 +65,7 @@ echo "
         <th>Payment</th>
         <th>People</th>
         <th>Time of Order</th>
+        <th>PaymentID</th>
         <th>Delete</th>
         </tr>";
     
@@ -84,6 +85,7 @@ echo "
         <td>{$key['totalcost']}</td>
         <td>{$key['people']}</td>
         <td>{$key['timeoforder']}</td>
+        <td>{$key['payid']}</td>
     <td>
     <form method='post' onsubmit='return confirmDelete({$key['ID']} );'>
     <input name='idToDelete'  type='hidden' value='{$key['ID']}'>
