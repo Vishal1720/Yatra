@@ -80,16 +80,19 @@ $con->close();
         <label class="loglbl"  for="male" style="margin-left: 33.7%;">Gender</label>
     </div>
         <div style="display: flex;">
-        <input required type="number" id="telnumber" name="phone" class="logfields" placeholder="Enter phone number" >
+        <input required type="number" id="telnumber" 
+        name="phone" class="logfields" placeholder="Enter phone number">
         <div id="gdiv">
         <label id="male"><input type="radio" id="radio" class="radio" value="male" name="gender">Male</label>
         <label id="female"><input name="gender" class="radio"  value="female" type="radio">Female</label>
     </div>
     </div>
         <label class="loglbl" for="initpass">Password</label>
-        <input required type="password" id="initpass" name="password" class="logfields" placeholder="Password" >
+        <input required type="password" id="initpass"
+         name="password" class="logfields" placeholder="Password" >
         <label class="loglbl" for="confirmpass"> Confirm Password</label>
-        <input required type="password" id="confirmpass" name="password" class="logfields" placeholder="Password" >
+        <input required type="password" id="confirmpass"
+         name="password" class="logfields" placeholder="Password" >
         <img src='eye-icon.png'  id="eyesignup" onclick="eyeswitchsign()">
         <div>
         <label class="loglbl" for="add"> Address </label>
@@ -97,14 +100,17 @@ $con->close();
         
     </div>
         <div style="display: flex;">
-            <textarea required rows="2" id="address" name="address" class="logfields" placeholder="Enter address" ></textarea>
+            <textarea required rows="2" id="address" name="address" 
+            class="logfields" placeholder="Enter address" ></textarea>
             <div>
-            <input class="logfields" style="margin-bottom: 0px;" placeholder="Enter district" id="district" name="district" list="districts">
+            <input class="logfields" style="margin-bottom: 0px;" 
+            placeholder="Enter district" id="district" name="district" list="districts">
             <datalist id="districts">
                 <option>Udupi</option>
                 <option>Dakshina Kannada</option>
             </datalist>
-            <input type="number" id="pin" name="pin" style="margin-top: 0.4rem;" class="logfields" required placeholder="Enter pincode"/>
+            <input type="number" id="pin" name="pin"
+             style="margin-top: 0.4rem;" class="logfields" required placeholder="Enter pincode"/>
         </div>
         </div>
 
