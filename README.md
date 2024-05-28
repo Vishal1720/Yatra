@@ -32,3 +32,12 @@ The main objective of the Yatra Travel Agency Website is to create an online    
 ### UserHomePage
 ![Packages](screenshots/userhomepage.png)
 
+### Employee Home Page
+![Packages](screenshots/adminAddTravel.png)
+
+### Admin Home Page
+![Packages](screenshots/superadminpage.png)
+
+
+
+
