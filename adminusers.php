@@ -48,7 +48,8 @@ $_SESSION['userview']=$view;
 <select id='select' onchange='submitForm()' name='view'>
     <option <?php if($_SESSION['userview']=='User') echo "selected" ?> >User</option>
     <option <?php if($_SESSION['userview']=='Packages') echo "selected" ?> >Packages</option>
-    <option value="BookedTable" <?php if($_SESSION['userview']=='BookedTable') echo "selected" ?> >Booked Table</option>
+    <option value="BookedTable" <?php if($_SESSION['userview']=='BookedTable') echo "selected" ?> >Booked</option>
+    <option value="Feedback" <?php if($_SESSION['userview']=='Feedback') echo "selected" ?> >Feedback</option>
 </select>
     </form>
 <?php
@@ -61,6 +62,8 @@ $_SESSION['userview']=$view;
 }
 else if($_SESSION['userview'] == 'BookedTable'){
     include "bookedpackagedetails.php";
+}else if($_SESSION['userview'] == 'Feedback'){
+    include "feedbackdetails.php";
 }
 ?>
 <script>

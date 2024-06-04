@@ -33,12 +33,13 @@ $_SESSION['userview']=$view;
 </header>
 
 <form id="viewform" action="" method="post">
-    <select name="view" onchange="submitForm()" 
-    style="background-color:black;color:white;text-align:center;font-size:1.3rem;margin-left:89%;margin-right:0px;height:fit-content;" >
+    <select  name="view" onchange="submitForm()" 
+    style="background-color:black;color:white;text-align:center;font-size:1.3rem;margin-left:82%;margin-right:0px;height:fit-content;" >
 <option <?php if($_SESSION['userview'] == 'User') echo 'selected'; ?> >User</option>
 <option <?php if($_SESSION['userview'] == 'Admin') echo 'selected'; ?>>Admin</option> 
 <option <?php if($_SESSION['userview'] == 'Packages') echo 'selected'; ?>>Packages</option>
 <option value='BookedTable' <?php if($_SESSION['userview'] == 'BookedTable') echo 'selected'; ?>>BookedTable</option> 
+<option value="Feedback" <?php if($_SESSION['userview']=='Feedback') echo "selected" ?> >Feedback</option>
 </select>
 </form>
     <?php
@@ -56,6 +57,8 @@ $_SESSION['userview']=$view;
     }
     else if($_SESSION['userview'] == 'BookedTable'){
         include "bookedpackagedetails.php";
+    }else if($_SESSION['userview'] == 'Feedback'){
+        include "feedbackdetails.php";
     }
 
 
