@@ -19,6 +19,7 @@
     
     <?php
         require "connection.php";
+        include 'logoutfield.php';
         $id = isset($_POST['tid']) ? $_POST['tid'] : '';
         $query = "SELECT * FROM tpackages WHERE ID = '$id'";
         $res = $con->query($query);
