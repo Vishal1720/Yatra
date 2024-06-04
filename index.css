@@ -23,7 +23,7 @@ header{
     border-radius: 13rem;
 }
 body{
-    background-image: url("bg1.jpg");
+    background-image: url("bg2.jpg");
     
     
     background-size: cover;
@@ -188,19 +188,7 @@ a:hover{
    
 }
 
-/* about */
 
-/* .imgslidercontainer{
-    display: grid;
-    flex-direction: column;
-    margin: auto;
-    
-    place-items: center;
-    
-    padding: 2%;
-    background-color: rgb(255, 107, 108);
-    color: wheat;
-} */
 .imgcontainer{
     display: flex;
     
