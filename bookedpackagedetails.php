@@ -1,19 +1,25 @@
 <link rel="stylesheet" href="index.css">
 <?php 
 include "connection.php";
-if(isset($_POST['dlt']))
+
+if($_SERVER['REQUEST_METHOD']=='POST')
 {
-    if(isset($_POST['idToDelete']))
+    if(isset($_POST['dlt']))
     {
-    $idtodelete=$_POST['idToDelete'];
-    deletebookedDetails($idtodelete);
+        $idtbd=$_POST['idToDelete'];
+        $query="Update `bookedpackages` SET status='canceled' where ID='$idtbd'";
+        $con->query($query);  
     }
 }
-function deletebookedDetails($idtbd)
+
+if($_SERVER['REQUEST_METHOD']=='POST')
 {
-    global $con;
-    $query="delete from `bookedpackages` where ID='$idtbd' "; 
-    $con->query($query);  
+    if(isset($_POST['confirm']))
+    {
+        $idtbd=$_POST['idToDelete'];
+        $query="Update `bookedpackages` SET status='confirmed' where ID='$idtbd'";
+        $con->query($query);  
+    }
 }
 ?>
 
@@ -54,6 +60,7 @@ function deletebookedDetails($idtbd)
     <?php
 if($_SESSION['status'] == 'admin' or $_SESSION['status'] == 'superadmin')
 {
+    
 echo "
     <table>
         <tr>
@@ -66,14 +73,22 @@ echo "
         <th>People</th>
         <th>Time of Order</th>
         <th>PaymentID</th>
-        <th>Delete</th>
+        <th>Cancel</th>
         </tr>";
     
     $query3="Select * from bookedpackages";
     $res=$con->query($query3);
     if($res->num_rows>=1)
     {
+        
         foreach ($res as $key) {
+            $cancel='Cancel';
+            $bg='';
+            $nameofbtn='dlt';
+            if($key['status']=='canceled'){
+                $cancel="Confirm";
+                $bg='background-color:green;color:white';
+                $nameofbtn='confirm';};
     echo "
     <tr>
         <td>{$key['ID']}</td>
@@ -87,9 +102,9 @@ echo "
         <td>{$key['timeoforder']}</td>
         <td>{$key['payid']}</td>
     <td>
-    <form method='post' onsubmit='return confirmDelete({$key['ID']} );'>
+    <form method='post' action='' onsubmit='return confirmDelete({$key['ID']});'>
     <input name='idToDelete'  type='hidden' value='{$key['ID']}'>
-    <button class='dlt' name='dlt' type='submit'>Delete </button>
+    <button class='dlt' name='$nameofbtn' type='submit' style='".$bg."'>$cancel</button>
     </form>
     </td>
 
@@ -108,7 +123,7 @@ echo "
 ?>
 
 <script>confirmDelete=(a)=>{
-var a=confirm("Are you sure you want to delete ID "+a);
+var a=confirm("Are you sure you want to perform this action for ID "+a);
 if(a)return true;
 else 
 return false;
