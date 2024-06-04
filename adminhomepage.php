@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin homepage</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        body{
+            background-image: url("bg3.jpeg");
+        }
+    </style>
 </head>
-<body>
+<body >
 <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
         <h4 style='display: inline;'>Yatra</h4></figure>
         <div id='navlinks'> 
