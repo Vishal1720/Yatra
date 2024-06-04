@@ -6,6 +6,9 @@
     <title>Admin</title>
     <link rel="stylesheet" href="index.css">
     <style>
+        body{
+            background-image: url("bg3.jpeg");
+        }
         #select{
             background-color: rgb(19, 42, 19);
             color: white;
@@ -14,6 +17,7 @@
             font-size: 1.5rem;
             margin-left: 87%;
         }
+        
         </style>
 </head>
 <body>
@@ -73,4 +77,10 @@ document.getElementById("viewform1").submit();
     }
     </script>
 </body>
-</html>
+
+<style>
+        body{
+            background-image: url("bg3.jpeg");
+        }
+        </style>
+        </html>
