@@ -1,9 +1,19 @@
+<!DOCTYPE html><html><body>
 <?php
 include "connection.php";
 $name=addslashes($_POST['name']);
 $email=$_POST['email'];
 $pass=addslashes($_POST['password']);
 $phone=$_POST['phone'];
+$repass=addslashes($_POST['repass']);
+
+if($pass != $repass)
+{
+    echo "<script>alert('Passwords do not match');
+    window.location.href='superadminhomepage.php';</script>";
+}
+
+
 if(isset($name) and isset($email) and isset($pass) and isset($phone))
 {
 $query="INSERT INTO `employee`(`email`, `name`, `password`, `contact`) 
@@ -30,3 +40,5 @@ else
     window.location.href='superadminhomepage.php'</script>";
 }
 }
+?></body>
+</html>
