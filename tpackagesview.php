@@ -14,8 +14,15 @@ if(isset($_POST['dltbtnpack']))
 function deletepack($idtbd)
 {
     global $con;
+$query="select * from `bookedpackages` where packageid='$idtbd' ";
+$res=$con->query($query);
+if($res->num_rows>=1)
+{
+    echo "<script>alert('Can not delete this since it is already has been booked by some user');</script>";
+}else{
     $query="delete from `tpackages` where ID='$idtbd' "; 
     $con->query($query);  
+}
 }
 ?>
 
