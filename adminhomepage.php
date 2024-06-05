@@ -9,7 +9,9 @@
         body{
             background-image: url("bg3.jpeg");
         }
+        
     </style>
+    <?php include "favicon.php";?>
 </head>
 <body >
 <header id='navbar'><figure><img id='logo' src='yatra.jpg' width='80rem' height='80rem'> 
