@@ -25,7 +25,9 @@ header{
 body{
     background-image: url("bg2.jpg");
     
-    
+  
+        overflow-x: hidden;
+  
     background-size: cover;
     
 }
