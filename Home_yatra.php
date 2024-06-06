@@ -8,8 +8,8 @@
    
 
     <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
+    <section id="services" class="services" style="background-image: linear-gradient(to right, #fffbd5, #b20a2c);">
+        <div class="container" >
             <h2>Our Services</h2>
             <div class="service">
                 <h3>Tour Packages</h3>
@@ -17,13 +17,13 @@
             </div>
             <div class="service">
                 <h3>Travel Guide</h3>
-                <p>We offer personalized local guides in our travel packages</p>
+                <p>We offer local guides in our travel packages</p>
             </div>
         </div>
     </section>
 
     <!-- Featured Destinations Section -->
-    <section id="destinations" class="destinations">
+    <section id="destinations" class="destinations" style="background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">
         <div class="container">
             <h2>Featured Destinations</h2>
             <div class="destination">
@@ -42,7 +42,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials" style="background-image: linear-gradient(to right, #fffbd5, #b20a2c);">
         <div class="container">
             <h2>What Our Clients Say</h2>
             <div class="testimonial">
@@ -55,7 +55,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style="background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );">
         <div class="container">
             <h2>Contact Us</h2>
             <form method="post" action="">
