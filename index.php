@@ -20,6 +20,22 @@
         }
         .imgcontainer{
             margin: auto;
+            
+        }
+
+        #cover{
+            width: 100%;
+            background-position: center;
+            background-size: cover; 
+            background-position: center;
+            animation: animateimg 10s infinite ease-in-out;
+        }
+        @keyframes animateimg{
+            0%{background-image:url("cover.jpeg");}
+            25%{background-image:url("cover1.jpg");}
+50%{background-image:url("bg2.jpg");}
+75%{background-image:url("bg2.jpg");}
+100%{background-image: url("cover.jpeg");}
         }
     </style>
 </head>
