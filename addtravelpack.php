@@ -13,7 +13,18 @@ $cost=$_POST['cost'];
 
 if(isset($title) && isset($desc)    && isset($date) && isset($pickup) && isset($drop) && isset($cost))
 {
-
+    $today=date_create();
+    $packdate=date_create($date);
+if($packdate<$today)
+{
+    echo "<script>alert('Invalid date');alert('Please enter an upcoming date');";
+    if($_SESSION['status'] == 'admin' and isset($_SESSION['email']))
+    echo "window.location.href='adminhomepage.php'</script>";
+   
+    if($_SESSION['status'] == 'superadmin' and isset($_SESSION['email']))
+    echo "window.location.href='superadminhomepage.php'</script>";
+   exit();
+}
  if (isset($_FILES["cover"]) && $_FILES["cover"]["error"] == 0) {
     $cover = addslashes(file_get_contents($_FILES["cover"]["tmp_name"]));
 
@@ -32,7 +43,7 @@ die('Insertion failed');
  }
 
  if($_SESSION['status'] == 'admin' and isset($_SESSION['email']))
- echo "<script>alert('Inserted Successfully');window.location.href='adminhomepage.php'</script>";
+ echo "<script>alert('Inserted Successfully');window.location.href='adminhomepage.php'</scripwindow.location.href=>";
 
  if($_SESSION['status'] == 'superadmin' and isset($_SESSION['email']))
  echo "<script>alert('Inserted Successfully');
