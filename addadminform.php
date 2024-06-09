@@ -19,7 +19,7 @@ if ($_SESSION['status'] == 'superadmin' and isset( $_SESSION["email"]))
     <label class="loglbl">Confirm Password</label>
     <input required type="password" id="confirmpass" name="repass"  class="logfields"  placeholder="Re-enter password" >
     
-    <label class="loglbl">Contact</label>
+    <label class="loglbl">Feedback form</label>
     <input required type="number" id="telnumber" style="width:100%" pattern="{10}[0-9]" name="phone" class="logfields" placeholder="Enter Phone Number" >
      
 <div style="display: flex;">
