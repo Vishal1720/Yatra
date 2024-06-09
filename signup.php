@@ -30,7 +30,7 @@ if(!$res)
    die("error");
 }
 else{
-   Header("location:login.php");
+   echo "<script>alert('Account created successfully');window.location.href='signup.php'</script>";
 }
 
 }
@@ -96,7 +96,7 @@ $con->close();
         <img src='eye-icon.png'  id="eyesignup" onclick="eyeswitchsign()">
         <div>
         <label class="loglbl" for="add"> Address </label>
-        <label class="loglbl" for="pincode" style="margin-left:52%;"> District </label>
+        <label class="loglbl" for="district"  style="margin-left:52%;"> District </label>
         
     </div>
         <div style="display: flex;">
@@ -110,7 +110,7 @@ $con->close();
                 <option>Dakshina Kannada</option>
             </datalist>
             <input type="number" id="pin" name="pin"
-             style="margin-top: 0.4rem;" class="logfields" required placeholder="Enter pincode"/>
+             style="margin-top: 0.4rem;" class="logfields" pattern="[0-9]{6}" required placeholder="Enter pincode"/>
         </div>
         </div>
 
