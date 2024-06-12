@@ -42,11 +42,11 @@
                 <input class='logfields' type='text' value={$item['droplocation']} readonly>
                 
                 <label class='loglbl'>Cost</label>
-                <input  type='text' class='logfields' id='cost' name='cost' value='{$item['cost']}' readonly >
+                <input  type='number'  class='logfields' id='cost' name='cost' value='{$item['cost']}' readonly >
                 
                 <label class='loglbl'>Number of persons</label>
-                <input class='logfields' pattern='[0-9]{5}' 
-                  type='text' id='noOfPerson' name='noOfPerson' autofocus
+                <input class='logfields' pattern='[0-9]{2}' 
+                  type='number' min='1' max='10' id='noOfPerson' name='noOfPerson' autofocus
                  value='1' onkeyup='changecost()'>
               
                 <input class='logbtn' id='logsubmit' style='width:100%;' type='button' value='Pay'>
@@ -56,7 +56,12 @@
          changecost=()=>{
 
 var numberPeople=document.getElementById('noOfPerson').value;
-
+if(numberPeople >10)
+{
+alert('Enter a number less than or equal to 10 for number of people');
+document.getElementById('noOfPerson').value=1;    
+numberPeople=1;    
+}
 var cost=document.getElementById('cost');
 if(numberPeople == 0)
 cost.value=Math.abs(originalcost);
