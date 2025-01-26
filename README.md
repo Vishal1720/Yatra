@@ -16,7 +16,7 @@ The main objective of the Yatra Travel Agency Website is to create an online    
 
 -	User registration and login functionality
 -	Admin login for managing website content and user accounts
--	Integration of local guides and tour operator
+-	Integration of local guides and tour operators
 -	User-friendly interface showcasing various travel packages
 
 
